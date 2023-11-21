@@ -10,15 +10,15 @@ public class Fata extends Avatar {
     private boolean wink;
 
     public Fata()
-    {
+    {   super();
         this.blinking = false;
-        this.eyeColor = "Alb";
+        this.eyeColor = "";
         this.index = 0;
-        this.namePng = "";
+        this.namePng=""; 
         this.wink = false;
     }
 
-    public Fata(boolean wink,String eyeColor,int index,String namePng)
+   /* public Fata(boolean wink,String eyeColor,int index,String namePng)
     {
         super();
         this.blinking=false;
@@ -27,20 +27,21 @@ public class Fata extends Avatar {
         this.index=index;
         this.namePng=namePng;
     }
+    */
     
-    public Fata(String eyeColor, int index, String namePng, int layer, int[] backgroundColor, int pozitieX, int pozitieY)
+    public Fata( int index, String eyeColor, int layer,  int pozitieX, int pozitieY)
     {
-        super(layer, backgroundColor, pozitieX, pozitieY);
+        super(layer, pozitieX, pozitieY);
         this.blinking = false;
         this.eyeColor = eyeColor;
         this.index = index;
-        this.namePng = namePng;
+        this.namePng = "Fata_"+this.index+"_"+this.eyeColor+".png";
         this.wink = false;
     }
 
     public Fata( Fata F)
     {
-        
+        super(F);
         this.blinking = F.blinking;
         this.eyeColor = F.eyeColor;
         this.index = F.index;

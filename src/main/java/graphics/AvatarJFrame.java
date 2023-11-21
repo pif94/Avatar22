@@ -49,13 +49,15 @@ public class AvatarJFrame extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         pricipalPanel = new javax.swing.JPanel();
         mainAvatarLayeredPane = new javax.swing.JLayeredPane();
         backgroundAvatarBodyLabel = new javax.swing.JLabel();
         fataLabel = new javax.swing.JLabel();
         saveButton = new javax.swing.JButton();
+        hideToggleButton = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -64,6 +66,7 @@ public class AvatarJFrame extends javax.swing.JFrame {
         setLocation(new java.awt.Point(0, 0));
         setMinimumSize(new java.awt.Dimension(1000, 700));
         setResizable(false);
+        getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
         backgroundAvatarBodyLabel.setBackground(new java.awt.Color(255, 255, 255));
         backgroundAvatarBodyLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -111,7 +114,7 @@ public class AvatarJFrame extends javax.swing.JFrame {
         mainAvatarLayeredPaneLayout.setHorizontalGroup(
             mainAvatarLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainAvatarLayeredPaneLayout.createSequentialGroup()
-                .addContainerGap(120, Short.MAX_VALUE)
+                .addContainerGap(117, Short.MAX_VALUE)
                 .addComponent(fataLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(113, 113, 113))
             .addGroup(mainAvatarLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,18 +125,29 @@ public class AvatarJFrame extends javax.swing.JFrame {
             .addGroup(mainAvatarLayeredPaneLayout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(fataLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(439, Short.MAX_VALUE))
+                .addContainerGap(453, Short.MAX_VALUE))
             .addGroup(mainAvatarLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainAvatarLayeredPaneLayout.createSequentialGroup()
-                    .addComponent(backgroundAvatarBodyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE)
-                    .addContainerGap()))
+                .addComponent(backgroundAvatarBodyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE))
         );
 
         saveButton.setText("Save");
         saveButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        saveButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        saveButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 saveButtonActionPerformed(evt);
+            }
+        });
+
+        hideToggleButton.setText("Hide toggle");
+        hideToggleButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, java.awt.Color.lightGray, java.awt.Color.white));
+        hideToggleButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                hideToggleButtonActionPerformed(evt);
+                hideToggleButtonActionPerformed1(evt);
             }
         });
 
@@ -142,10 +156,12 @@ public class AvatarJFrame extends javax.swing.JFrame {
         pricipalPanelLayout.setHorizontalGroup(
             pricipalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pricipalPanelLayout.createSequentialGroup()
-                .addContainerGap(385, Short.MAX_VALUE)
+                .addContainerGap(388, Short.MAX_VALUE)
                 .addComponent(mainAvatarLayeredPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(263, 263, 263)
-                .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(269, 269, 269)
+                .addGroup(pricipalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(saveButton, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                    .addComponent(hideToggleButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         pricipalPanelLayout.setVerticalGroup(
@@ -153,23 +169,16 @@ public class AvatarJFrame extends javax.swing.JFrame {
             .addGroup(pricipalPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pricipalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mainAvatarLayeredPane)
+                    .addComponent(mainAvatarLayeredPane, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)
                     .addGroup(pricipalPanelLayout.createSequentialGroup()
                         .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(hideToggleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pricipalPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pricipalPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(pricipalPanel);
 
         pack();
         setLocationRelativeTo(null);
@@ -216,6 +225,16 @@ public class AvatarJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_saveButtonActionPerformed
 
+    private void hideToggleButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_hideToggleButtonActionPerformed
+    {//GEN-HEADEREND:event_hideToggleButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hideToggleButtonActionPerformed
+
+    private void hideToggleButtonActionPerformed1(java.awt.event.ActionEvent evt)//GEN-FIRST:event_hideToggleButtonActionPerformed1
+    {//GEN-HEADEREND:event_hideToggleButtonActionPerformed1
+        mainAvatarLayeredPane.setVisible(!mainAvatarLayeredPane.isVisible());
+    }//GEN-LAST:event_hideToggleButtonActionPerformed1
+
     /**
      * @param args the command line arguments
      */
@@ -245,6 +264,7 @@ public class AvatarJFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel backgroundAvatarBodyLabel;
     private javax.swing.JLabel fataLabel;
+    private javax.swing.JToggleButton hideToggleButton;
     private javax.swing.JLayeredPane mainAvatarLayeredPane;
     private javax.swing.JPanel pricipalPanel;
     private javax.swing.JButton saveButton;

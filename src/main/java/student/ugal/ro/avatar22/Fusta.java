@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package student.ugal.ro.avatar22;
 
 /**
@@ -16,19 +12,17 @@ public class Fusta extends Avatar{
     
 
     public Fusta() {
-        super();
-       
+        super();       
         this.color="";
         this.index=0;
-        this.numePng="Fusta_"+this.index+".png";
+        this.numePng="";
         
     }
 
     
-    public Fusta(String color, int index, int layer, int[] culoare, int pozitieX, int pozitieY)
+    public Fusta(int index, String color, int layer, int pozitieX, int pozitieY)
     {
-        super(layer, culoare, pozitieX, pozitieY);
-        
+        super(layer, pozitieX, pozitieY);        
         this.color = color;
         this.index = index;
         this.numePng="Fusta_"+this.index+"_"+this.color+".png";
@@ -36,7 +30,7 @@ public class Fusta extends Avatar{
     
     public Fusta(Fusta f)
     {
-    
+        super(f);
         this.color=f.color;
         this.index=f.index;
         this.numePng=f.numePng;
@@ -51,17 +45,19 @@ public class Fusta extends Avatar{
     public void setIndex(int index)
     {
         this.index = index;
+        this.numePng="Fusta_"+this.index+"_"+this.color+".png";
     }
     
     public String getNumePng()
     {
         return numePng;
     }
-
+/*
     public void setNumePng(String numePng)
     {
         this.numePng = numePng;
     }
+    */
     
     public String getColor()
     {
@@ -71,6 +67,7 @@ public class Fusta extends Avatar{
     public void setColor(String color)
     {
         this.color = color;
+        this.numePng="Fusta_"+this.index+"_"+this.color+".png";
     }
     
     @Override

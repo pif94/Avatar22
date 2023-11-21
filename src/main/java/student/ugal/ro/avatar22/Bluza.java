@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package student.ugal.ro.avatar22;
 
 /**
@@ -25,9 +21,9 @@ public class Bluza extends Avatar{
     }
 
     
-    public Bluza(boolean gros, String color, int index, int layer, int[] culoare, int pozitieX, int pozitieY)
+    public Bluza(boolean gros,  int index, String color, int layer, int pozitieX, int pozitieY)
     {
-        super(layer, culoare, pozitieX, pozitieY);
+        super(layer, pozitieX, pozitieY);
         this.gros = gros;
         this.color = color;
         this.index = index;
@@ -35,17 +31,14 @@ public class Bluza extends Avatar{
     }
     
     public Bluza (Bluza b)
-    {
+    {super(b);
     this.gros=b.gros;
         this.color=b.color;
         this.index=b.index;
         this.numePng=b.numePng;
     }
     
-   /*  int getNrModele() { 
-        return nrModele;
-    }
-     */
+ 
      public boolean isGros()
     {
         return gros;
@@ -64,6 +57,7 @@ public class Bluza extends Avatar{
     public void setIndex(int index)
     {
         this.index = index;
+        this.numePng="Bluza_"+index+"_"+this.color+".png";
     }
     
     public String getNumePng()
@@ -71,11 +65,11 @@ public class Bluza extends Avatar{
         return numePng;
     }
 
-    public void setNumePng(String numePng)
+  /*  public void setNumePng(String numePng)
     {
         this.numePng = numePng;
     }
-    
+    */
     public String getColor()
     {
         return color;
@@ -84,6 +78,7 @@ public class Bluza extends Avatar{
     public void setColor(String color)
     {
         this.color = color;
+        this.numePng="Bluza_"+this.index+"_"+color+".png";
     }
     
     @Override

@@ -2,8 +2,7 @@ package student.ugal.ro.avatar22;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Vector;
-import static student.ugal.ro.avatar22.Avatar.culori;
+
 
 public class AvatarTest {
 
@@ -19,150 +18,133 @@ public class AvatarTest {
             System.out.println("1:Test Par+Palarie\n2:Test Fata+Accesori\n3:Test Bluza+Fusta\n4:Test Pantaloni+Pantofi\n");
 
             alg = scanner.nextInt();
-
+          
             switch (alg)
             {
 //start case 1
                 case 1:
-                    Par p1 = new Par(2, 0, 0, " "); 
-        Par p2 = new Par(2, 0, 0,  " "); 
-        Par p3 = new Par(p2); 
+        Par p1 = new Par(1, "alb",1,350,1000); 
+        Par p2 = new Par(2,"albastru", 2,340,1050); 
+        //Par p3 = new Par(p2); 
+        Par p3 = new Par(3, "mov", 3,366,950);
+        Palarie pa1 = new Palarie(1, "mov", 1, 300,1000); 
+        Palarie pa2 = new Palarie(2, "negru ", 2,250,900); 
+      //  Palarie pa3 = new Palarie(pa2); 
+        Palarie pa3 = new Palarie(3,"maro", 3,266,850);
 
-       
-        Palarie pa1 = new Palarie(3, 0, 0, " "); 
-        Palarie pa2 = new Palarie(3, 0, 0, " "); 
-        Palarie pa3 = new Palarie(pa2); 
-
-        
-       
         System.out.println(p1);
         System.out.println(p2);
         System.out.println(p3);
         System.out.println(pa1);
         System.out.println(pa2);
         System.out.println(pa3);
+        ArrayList<Par> parListT = new ArrayList<>();
+                    Par par1=new Par();
+                    Par par2= new Par(1, "alb", 1,350,1000);
+                    Par par3= new Par(2, "albastru", 2,333,1050);
+                    Par par4= new Par(3,"galben", 3,365,1100); 
+                    Par par5= new Par(4,"maro", 4,321,980);
+                    Par par6= new Par(5, "mov", 5,335,480); 
+                    Par par7= new Par(6,"negru", 6,400,1000); 
+                    Par par8= new Par(7,"portocaliu", 7,370,130);
+                    Par par9= new Par(8,"rosu", 8,300,1051);
+                    Par par10= new Par(par9);
 
-        
-       /*
-p1.alegePar("par_alb.png");
-        p2.alegePar("par_albastru.png");
-        p3.alegePar("par_negru.png");
-        pa1.alegePalarie("palarie_alb.png");
-        pa2.alegePalarie("palarie_albastru.png");
-        pa3.alegePalarie("palarie_galben.png");
-        */
-       
-        //  vector de Par
-        Vector<Par> vectorPar = new Vector<Par>();
-        //  10 instante 
-        vectorPar.add(new Par(2, 0, 0, " "));
-        vectorPar.add(new Par(1, 0,  0, "alb"));
-        vectorPar.add(new Par(2, 0, 0, "albastru"));
-        vectorPar.add(new Par(3, 0, 0, "galben"));
-        vectorPar.add(new Par(4, 0, 0, "maro"));
-        vectorPar.add(new Par(5, 0, 0, "mov"));
-        vectorPar.add(new Par(6, 0, 0, "negru"));
-        vectorPar.add(new Par(7, 0, 0, "portocaliu"));
-        vectorPar.add(new Par(8, 0, 0, "rosu"));
-        vectorPar.add(new Par(9, 0,0, "roz"));
-
-        //  un vector de Palarie
-        Vector<Palarie> vectorPalarie = new Vector<Palarie>();
-        //  10 instante 
-        vectorPalarie.add(new Palarie(3, 0,0, " "));
-        vectorPalarie.add(new Palarie(1, 0, 00, "alb"));
-        vectorPalarie.add(new Palarie(2, 0, 0, "albastru"));
-        vectorPalarie.add(new Palarie(3, 0, 0, "galben"));
-        vectorPalarie.add(new Palarie(4, 0, 0, "maro"));
-        vectorPalarie.add(new Palarie(5, 0, 0, "mov"));
-        vectorPalarie.add(new Palarie(6, 0, 0, "negru"));
-        vectorPalarie.add(new Palarie(7, 0, 0, "portocaliu"));
-        vectorPalarie.add(new Palarie(8, 0, 0, "rosu"));
-        vectorPalarie.add(new Palarie(9, 0, 0, "roz"));
-        // se afiseaza instantele pt fiecare vector pt par si palarie
-        
-        System.out.println("Vectorul de Par:");
-        for (Par p : vectorPar) { 
-            System.out.println(p);         }
-        System.out.println("Vectorul de Palarie:");
-        for (Palarie pa : vectorPalarie) { 
-            System.out.println(pa); 
-        }
-    
+                     parListT.add(par1);
+                      parListT.add(par2);
+                       parListT.add(par3);
+                        parListT.add(par4);
+                         parListT.add(par5);
+                          parListT.add(par6);
+                           parListT.add(par7);
+                            parListT.add(par8);
+                             parListT.add(par9);
+                              parListT.add(par10);
+                    for (Par par : parListT)
+                    {
+                        System.out.println(par + "\n");
+                    }
+   
+        ArrayList<Palarie> palarieListT = new ArrayList<>();
+                    Palarie palarie1=new Palarie();
+                    Palarie palarie2= new Palarie(1,  "alb", 1, 400, 1000);
+                    Palarie palarie3= new Palarie(2,  "albastru", 2, 387, 950); 
+                    Palarie palarie4= new Palarie(3, "galben", 3, 360, 980); 
+                    Palarie palarie5= new Palarie(4,  "maro", 4, 350, 1000); 
+                    Palarie palarie6= new Palarie(5,  "mov", 5, 370, 990); 
+                    Palarie palarie7= new Palarie(6,  "negru", 6, 380, 990); 
+                    Palarie palarie8= new Palarie(7,  "portocaliu", 7, 380, 980 );
+                    Palarie palarie9= new Palarie(8, "rosu", 8, 410, 1010); 
+                    Palarie palarie10= new Palarie(palarie9);
+                    
+                     palarieListT.add(palarie1);
+                      palarieListT.add(palarie2);
+                       palarieListT.add(palarie3);
+                        palarieListT.add(palarie4);
+                         palarieListT.add(palarie5);
+                          palarieListT.add(palarie6);
+                           palarieListT.add(palarie7);
+                            palarieListT.add(palarie8);
+                             palarieListT.add(palarie9);
+                              palarieListT.add(palarie10);
+                    for (Palarie palarie : palarieListT)
+                    {
+                        System.out.println(palarie + "\n");
+                    }
     // Final case 1                
                     break;
                 case 2:
 
                     // constr. implict
-                    Fata fata1 = new Fata();
-
-                    //Fata(boolean wink, String eyeColor, int index, String namePng)
-                    Fata fata2 = new Fata(true, "Albastru", 1, "fata_1.png");
-                    Fata fata3 = new Fata(false, "Verde", 2, "fata_2.png");
-                    Fata fata4 = new Fata(true, "Rosu", 3, "fata_3.png");
-
-                    // Fata(String eyeColor, int index, String namePng, int layer, int[] backgroundColor, int pozitieX, int pozitieY)
-                    Fata fata5 = new Fata("Galben", 4, "fata_4.png", 2, new int[]
-                    {
-                        180, 160, 20
-                    }, 500, 600);
-                    Fata fata6 = new Fata("Roz", 5, "fata_5.png", 3, new int[]
-                    {
-                        40, 80, 170
-                    }, 500, 600);
-                    Fata fata7 = new Fata("Negru", 6, "fata_6.png", 2, new int[]
-                    {
-                        120, 150, 200
-                    }, 500, 600);
+                    Fata fata0 = new Fata();
+//public Fata( int index, String eyeColor, int layer,  int pozitieX, int pozitieY)
+                    Fata fata1 = new Fata(1, "Rosii", 2, 350, 950);
+                    Fata fata2 = new Fata(5, "Albastrii", 4, 350, 950);
+                    Fata fata3 = new Fata(3, "Alb", 1, 350, 950);
+                    Fata fata4 = new Fata(9, "Verzi", 4, 350, 950);
+                    Fata fata5 = new Fata(9, "Galbeni", 2, 350, 950);
+                    Fata fata6 = new Fata(9, "Mov", 1, 350, 950);
+                    Fata fata7 = new Fata(9, "Maronii", 3, 350, 950);
 
                     //constr. copiere
-                    Fata fata8 = new Fata(fata1);
-                    Fata fata9 = new Fata(fata2);
-                    Fata fata10 = new Fata(fata5);
+                    Fata fata8 = new Fata(fata0);
+                    Fata fata9 = new Fata(fata1);
 
-                    ArrayList<Fata> fataListT = new ArrayList<>();
+                    ArrayList<Fata> fataListF1 = new ArrayList<>();
 
-                    fataListT.add(fata1);
-                    fataListT.add(fata2);
-                    fataListT.add(fata3);
-                    fataListT.add(fata4);
-                    fataListT.add(fata5);
-                    fataListT.add(fata6);
-                    fataListT.add(fata7);
-                    fataListT.add(fata8);
-                    fataListT.add(fata9);
-                    fataListT.add(fata10);
+                    fataListF1.add(fata0);
+                    fataListF1.add(fata1);
+                    fataListF1.add(fata2);
+                    fataListF1.add(fata3);
+                    fataListF1.add(fata4);
+                    fataListF1.add(fata5);
+                    fataListF1.add(fata6);
+                    fataListF1.add(fata7);
+                    fataListF1.add(fata8);
+                    fataListF1.add(fata9);
 
-                    for (Fata fata : fataListT)
+                    for (Fata fata : fataListF1)
                     {
                         System.out.println(fata + "\n");
                     }
 
-                    Accesori accesori1 = new Accesori();
-                    //(String color, boolean mirrored, int index, String numePng)
-                    Accesori accesori2 = new Accesori("Alb", false, 1, "accesori_1.png");
-                    Accesori accesori3 = new Accesori("Negru", true, 2, "accesori_2.png");
-                    Accesori accesori4 = new Accesori("Rosu", false, 3, "accesori_3.png");
-                    //(boolean gros, String color, boolean mirrored, int index, String numePng, int layer, int[] culoare, int pozitieX, int pozitieY)
-                    Accesori accesori5 = new Accesori(false, "Galben", true, 4, "accesori_4.png", 2, new int[]
-                    {
-                        180, 160, 20
-                    }, 940, 678);
-                    Accesori accesori6 = new Accesori(false, "Roz", false, 5, "accesori_5.png", 3, new int[]
-                    {
-                        40, 80, 170
-                    }, 501, 597);
-                    Accesori accesori7 = new Accesori(true, "Albastru", true, 6, "accesori_6.png", 2, new int[]
-                    {
-                        120, 150, 200
-                    }, 564, 553);
-                    //copy constructor accesori
-                    Accesori accesori8 = new Accesori(accesori1);
-                    Accesori accesori9 = new Accesori(accesori2);
-                    Accesori accesori10 = new Accesori(accesori5);
+                    //constructor implicit
+                    Accesori accesori0 = new Accesori();
+                    //public Accesori(boolean gros, boolean mirrored, int index, String color, int layer,  int pozitieX, int pozitieY)
+                    Accesori accesori1 = new Accesori(false, false, 0, "RosuRubiniu", 2, 305, 240);
+                    Accesori accesori2 = new Accesori(false, true, 1, "AlbastruRegal", 1, 320, 560);
+                    Accesori accesori3 = new Accesori(true, false, 1, "VerdeSmarald", 3, 335, 920);
+                    Accesori accesori4 = new Accesori(true, true, 2, "GalbenAuriu", 4, 350, 290);
+                    Accesori accesori5 = new Accesori(false, false, 3, "PortocaliuCoral", 7, 365, 710);
+                    Accesori accesori6 = new Accesori(true, false, 5, "VioletAmetist", 11, 380, 1160);
+                    Accesori accesori7 = new Accesori(false, true, 8, "GriPerlat", 18, 395, 440);
+                    //constructor copiere
+                    Accesori accesori8 = new Accesori(accesori0);
+                    Accesori accesori9 = new Accesori(accesori1);
 
                     ArrayList<Accesori> accesoriList2 = new ArrayList<>();
 
+                    accesoriList2.add(accesori0);
                     accesoriList2.add(accesori1);
                     accesoriList2.add(accesori2);
                     accesoriList2.add(accesori3);
@@ -172,7 +154,6 @@ p1.alegePar("par_alb.png");
                     accesoriList2.add(accesori7);
                     accesoriList2.add(accesori8);
                     accesoriList2.add(accesori9);
-                    accesoriList2.add(accesori10);
 
                     for (Accesori accesori : accesoriList2)
                     {
@@ -181,19 +162,19 @@ p1.alegePar("par_alb.png");
 
                     break;
                 case 3:
-                    int i;
+                     
                     //"alb","galben", "mov", "albastru", "roz",
                           // "negru", "portocaliu", "rosu", "verde", "maro"
                     ArrayList<Bluza> bluzaListT = new ArrayList<>();
                     Bluza bluza1=new Bluza();
-                    Bluza bluza2= new Bluza(false, "alb",2,1,new int[]{255,255,255},0,0);
-                    Bluza bluza3= new Bluza(false, "mov",3,1,new int[]{255,255,255},0,0);
-                    Bluza bluza4= new Bluza(false, "albastru",4,1,new int[]{255,255,255},0,0);
-                    Bluza bluza5= new Bluza(false, "roz",5,1,new int[]{255,255,255},0,0);
-                    Bluza bluza6= new Bluza(true, "negru",6,1,new int[]{255,255,255},0,0);
-                    Bluza bluza7= new Bluza(true, "portocaliu",7,1,new int[]{255,255,255},0,0);
-                    Bluza bluza8= new Bluza(true, "rosu",8,1,new int[]{255,255,255},0,0);
-                    Bluza bluza9= new Bluza(false, "verde",9,1,new int[]{255,255,255},0,0);
+                    Bluza bluza2= new Bluza(false,2, "alb",1,350,700);
+                    Bluza bluza3= new Bluza(false,3, "mov",2,300,650);
+                    Bluza bluza4= new Bluza(false,4, "albastru",2,360,750);
+                    Bluza bluza5= new Bluza(false,5, "roz",3,0,0);
+                    Bluza bluza6= new Bluza(true,6, "negru",3,332,680);
+                    Bluza bluza7= new Bluza(true,7, "portocaliu",4,355,680);
+                    Bluza bluza8= new Bluza(true,8, "rosu",5,360,700);
+                    Bluza bluza9= new Bluza(false,9, "verde",6,100,350);
                     Bluza bluza10= new Bluza(bluza9);
                     
                      bluzaListT.add(bluza1);
@@ -205,7 +186,7 @@ p1.alegePar("par_alb.png");
                            bluzaListT.add(bluza7);
                             bluzaListT.add(bluza8);
                              bluzaListT.add(bluza9);
-                              bluzaListT.add(bluza1);
+                              bluzaListT.add(bluza10);
                     for (Bluza bluza : bluzaListT)
                     {
                         System.out.println(bluza + "\n");
@@ -214,14 +195,14 @@ p1.alegePar("par_alb.png");
                     //fusta
                     ArrayList<Fusta> fustaListT = new ArrayList<>();
                     Fusta fusta1=new Fusta();
-                    Fusta fusta2= new Fusta( "alb",2,1,new int[]{255,255,255},0,0);
-                    Fusta fusta3= new Fusta( "mov",3,1,new int[]{255,255,255},0,0);
-                    Fusta fusta4= new Fusta("albastru",4,1,new int[]{255,255,255},0,0);
-                    Fusta fusta5= new Fusta("roz",5,1,new int[]{255,255,255},0,0);
-                    Fusta fusta6= new Fusta( "negru",6,1,new int[]{255,255,255},0,0);
-                    Fusta fusta7= new Fusta("portocaliu",7,1,new int[]{255,255,255},0,0);
-                    Fusta fusta8= new Fusta("rosu",8,1,new int[]{255,255,255},0,0);
-                    Fusta fusta9= new Fusta("verde",9,1,new int[]{255,255,255},0,0);
+                    Fusta fusta2= new Fusta(2, "alb",1,355,1100);
+                    Fusta fusta3= new Fusta(3, "mov",1,350,1150);
+                    Fusta fusta4= new Fusta(4,"albastru",1,360,1160);
+                    Fusta fusta5= new Fusta(5,"roz",1,370,1170);
+                    Fusta fusta6= new Fusta(6, "negru",1,380,1180);
+                    Fusta fusta7= new Fusta(7,"portocaliu",1,390,1190);
+                    Fusta fusta8= new Fusta(8,"rosu",1,400,1200);
+                    Fusta fusta9= new Fusta(9,"verde",1,410,1210);
                     Fusta fusta10= new Fusta(fusta9);
                     
                      fustaListT.add(fusta1);
@@ -241,45 +222,60 @@ p1.alegePar("par_alb.png");
                              
                     break;
                 case 4:
+ArrayList<Pantofi> pantofiListT = new ArrayList<>();
+                    Pantofi pantofi1=new Pantofi();
+                    Pantofi pantofi2= new Pantofi(false, 1,  "alb", 1, 350, 1000);
+                    Pantofi pantofi3= new Pantofi(false, 2,  "albastru", 2, 380, 950);
+                    Pantofi pantofi4= new Pantofi(true, 3, "galben", 3, 360, 985); 
+                    Pantofi pantofi5= new Pantofi(false, 4,  "maro", 4, 370, 1000);
+                    Pantofi pantofi6= new Pantofi(true, 5,  "mov", 5, 370, 990); 
+                    Pantofi pantofi7= new Pantofi(false, 6,  "negru", 6, 380, 990); 
+                    Pantofi pantofi8= new Pantofi(true, 7,  "portocaliu", 7, 380, 980);
+                    Pantofi pantofi9= new Pantofi(false, 8, "rosu", 8, 400, 910);
+                    Pantofi pantofi10= new Pantofi(pantofi9);
 
-                    //Testare clasa Pantaloni
-                    System.out.println("\nTestare clasa Pantaloni\n");
-                    Pantaloni p = new Pantaloni();
-                    int nrModelePantaloni = p.getNrModele();
-
-                    //Avem un nr. de instante de pantaloni = cu nrModelePantaloni x 10 culori
-                    Pantaloni x[][] = new Pantaloni[nrModelePantaloni][10];
-                    for (int model = 0; model < nrModelePantaloni; model++)
+                     pantofiListT.add(pantofi1);
+                      pantofiListT.add(pantofi2);
+                       pantofiListT.add(pantofi3);
+                        pantofiListT.add(pantofi4);
+                         pantofiListT.add(pantofi5);
+                          pantofiListT.add(pantofi6);
+                           pantofiListT.add(pantofi7);
+                            pantofiListT.add(pantofi8);
+                             pantofiListT.add(pantofi9);
+                              pantofiListT.add(pantofi10);
+                    for (Pantofi pantofi : pantofiListT)
                     {
-                        for (int culoare = 0; culoare < 10; culoare++)
-                        {
-                            x[model][culoare] = new Pantaloni(model, culoare);
-                            System.out.println(x[model][culoare]);
-                            /*putem afisa obiectul x[][] direct cu println deoarece a fost
-                suprascrisa metoda toString in clasa Pantaloni*/
-                        }
+                        System.out.println(pantofi + "\n");
                     }
+        ArrayList<Pantaloni> pantaloniListT = new ArrayList<>();
+                    Pantaloni pantaloni1=new Pantaloni();
+                    Pantaloni pantaloni2= new Pantaloni(true, 1,  "alb", 1, 350, 1200);
+                    Pantaloni pantaloni3= new Pantaloni(false, 2,  "albastru", 2, 370, 1250);
+                    Pantaloni pantaloni4= new Pantaloni(false, 3, "galben", 3, 360, 1150); 
+                    Pantaloni pantaloni5= new Pantaloni(true, 4,  "maro", 4, 360, 1200);
+                    Pantaloni pantaloni6= new Pantaloni(false, 5,  "mov", 5, 370, 1300); 
+                    Pantaloni pantaloni7= new Pantaloni(false, 6,  "negru", 6, 370, 1100); 
+                    Pantaloni pantaloni8= new Pantaloni(false, 7,  "portocaliu", 7, 380, 1280);
+                    Pantaloni pantaloni9= new Pantaloni(false, 8, "rosu", 8, 350, 1200);
+                    Pantaloni pantaloni10= new Pantaloni(pantaloni9);
 
-                    //Testare clasa Pantofi
-                    System.out.println("\nTestare clasa Pantofi\n");
-                    Pantofi q = new Pantofi();
-                    int nrModelePantofi = q.getNrModele();
-
-                    //Avem un nr. de instante de pantofi = cu nrModelePantofi x 10 culori
-                    Pantofi y[][] = new Pantofi[nrModelePantofi][10];
-                    for (int model = 0; model < nrModelePantofi; model++)
+                     pantaloniListT.add(pantaloni1);
+                      pantaloniListT.add(pantaloni2);
+                       pantaloniListT.add(pantaloni3);
+                        pantaloniListT.add(pantaloni4);
+                         pantaloniListT.add(pantaloni5);
+                          pantaloniListT.add(pantaloni6);
+                           pantaloniListT.add(pantaloni7);
+                            pantaloniListT.add(pantaloni8);
+                             pantaloniListT.add(pantaloni9);
+                              pantaloniListT.add(pantaloni10);
+                    for (Pantaloni pantaloni : pantaloniListT)
                     {
-                        for (int culoare = 0; culoare < 10; culoare++)
-                        {
-                            y[model][culoare] = new Pantofi(model, culoare);
-                            System.out.println(y[model][culoare]);
-                            /*putem afisa obiectul y[][] direct cu println deoarece a fost
-                suprascrisa metoda toString in clasa Pantofi*/
-                        }
+                        System.out.println(pantaloni + "\n");
                     }
-            
+           
             break;
-        
     }
         }while (alg!=0);
         scanner.close();

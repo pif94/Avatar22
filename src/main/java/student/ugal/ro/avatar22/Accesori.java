@@ -1,7 +1,5 @@
 package student.ugal.ro.avatar22;
 
-import java.util.Arrays;
-
 /**
  *
  * @author vn177
@@ -18,13 +16,13 @@ public class Accesori extends Avatar {
     {
         super();
         this.gros=false;
-        this.color="Alb";
+        this.color="";
         this.mirrored=false;
         this.index=0;
         this.numePng="";
     }
 
-    public Accesori(String color, boolean mirrored, int index, String numePng)
+   /* public Accesori(String color, boolean mirrored, int index, String numePng)
     {
         this.gros=false;
         this.color = color;
@@ -32,22 +30,22 @@ public class Accesori extends Avatar {
         this.index = index;
         this.numePng = numePng;
     }
-    
+    */
     
 
-    public Accesori(boolean gros, String color, boolean mirrored, int index, String numePng, int layer, int[] culoare, int pozitieX, int pozitieY)
-    {
-        super(layer, culoare, pozitieX, pozitieY);
+    public Accesori(boolean gros, boolean mirrored, int index, String color, int layer,  int pozitieX, int pozitieY)
+    {   
+        super(layer, pozitieX, pozitieY);
         this.gros = gros;
         this.color = color;
         this.mirrored = mirrored;
         this.index = index;
-        this.numePng = numePng;
+        this.numePng = "Acesorii_"+this.index+"_"+this.color+".png";
     }
 
     public Accesori(Accesori Ac)
     {
-      
+        super(Ac);
         this.gros = Ac.gros;
         this.color = Ac.color;
         this.mirrored = Ac.mirrored;
@@ -83,26 +81,28 @@ public class Accesori extends Avatar {
     public void setIndex(int index)
     {
         this.index = index;
+        this.numePng = "Acesorii_"+index+"_"+this.color+".png";
     }
 
     public String getNumePng()
     {
         return numePng;
     }
-
+/*
     public void setNumePng(String numePng)
     {
         this.numePng = numePng;
     }
-
+*/
     public String getColor()
-    {
+    {   
         return color;
     }
 
     public void setColor(String color)
-    {
+    {   
         this.color = color;
+        this.numePng = "Acesorii_"+this.index+"_"+color+".png";
     }
     
     public void mirrored()
