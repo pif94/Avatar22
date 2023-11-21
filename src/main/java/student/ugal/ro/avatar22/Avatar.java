@@ -2,10 +2,10 @@ package student.ugal.ro.avatar22;
 
 import java.util.Arrays;
 
-public abstract class Avatar {
+public class Avatar {
 
     private int layer;
-    private int[] backgroundColor;// backgroundColor
+    private int[] backgroundColor;// backgroundColor de scos
     private int pozitieX, pozitieY;
 
     // <editor-fold defaultstate="collapsed" desc="code-fold">
@@ -88,7 +88,7 @@ public abstract class Avatar {
     public Avatar()
     {
         this.layer = 0;
-        this.backgroundColor = new int[]{255, 255, 255};
+        this.backgroundColor = new int[]{255, 255, 255}; //long in hexa ??
         this.pozitieX = 0;
         this.pozitieY = 0;
     }

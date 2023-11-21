@@ -181,7 +181,7 @@ p1.alegePar("par_alb.png");
 
                     break;
                 case 3:
-                    int i;
+                    
                     //"alb","galben", "mov", "albastru", "roz",
                           // "negru", "portocaliu", "rosu", "verde", "maro"
                     ArrayList<Bluza> bluzaListT = new ArrayList<>();
@@ -205,7 +205,7 @@ p1.alegePar("par_alb.png");
                            bluzaListT.add(bluza7);
                             bluzaListT.add(bluza8);
                              bluzaListT.add(bluza9);
-                              bluzaListT.add(bluza1);
+                              bluzaListT.add(bluza10);
                     for (Bluza bluza : bluzaListT)
                     {
                         System.out.println(bluza + "\n");

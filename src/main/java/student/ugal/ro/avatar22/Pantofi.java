@@ -6,11 +6,13 @@ public class Pantofi extends Avatar {
     int indiceCuloare; //numarul culorii curente selectate de utilizator
     
     Pantofi() { //constructor fara argumente
+        super();
         this.indiceModel=0;
         this.indiceCuloare=0;
     }
     
     Pantofi(int indiceModel, int indiceCuloare) { //constructor cu argumente
+        super();
         this.indiceModel=indiceModel;
         this.indiceCuloare=indiceCuloare;
     }

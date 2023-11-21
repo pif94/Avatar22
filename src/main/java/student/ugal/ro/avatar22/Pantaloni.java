@@ -6,11 +6,13 @@ public class Pantaloni extends Avatar {
     int indiceCuloare; //numarul culorii curente selectate de utilizator
     
     Pantaloni() { //constructor fara argumente
+        super();
         this.indiceModel=0;
         this.indiceCuloare=0;
     }
     
     Pantaloni(int indiceModel, int indiceCuloare) { //constructor cu argumente
+        super();
         this.indiceModel=indiceModel;
         this.indiceCuloare=indiceCuloare;
     }
