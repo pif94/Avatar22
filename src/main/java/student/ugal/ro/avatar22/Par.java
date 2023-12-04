@@ -1,15 +1,5 @@
 package student.ugal.ro.avatar22;
 
-
-/**
- *
- * @author db343
- */
-
-package avatar;
-
-
-
 /**
  *
  * @author db343
@@ -25,11 +15,11 @@ public class Par extends Avatar {
         super(); 
         this.culoarePar = " ";
         this.index = 0;
-        this.numePng = "Par_" + this.index + ".png"; 
+        this.numePng = ""; 
     }
 
     // const cu toate arg
-    public Par(int layer,  int pozitieX, int pozitieY, String culoarePar, int index) {
+    public Par(int index, String culoarePar, int layer,  int pozitieX, int pozitieY ) {
         super(layer, pozitieX, pozitieY); 
         this.culoarePar = culoarePar;
         this.index = index;
@@ -39,7 +29,7 @@ public class Par extends Avatar {
     // const de copiere
     public Par(Par p) {
         super(p); 
-        this.culoarePar = culoarePar;
+        this.culoarePar = p.culoarePar;
         this.index = p.index;
         this.numePng = p.numePng;
     }
@@ -50,20 +40,24 @@ public class Par extends Avatar {
 
     public void setIndex(int index) {
         this.index = index;
+         this.numePng = "Par_" + this.index + "_" + this.culoarePar + ".png"; 
     }
 
     public String getNumePng() {
         return numePng;
     }
-
+/*
     public void setNumePng(String numePng) {
         this.numePng = numePng;
-    }
-    public void getCuloarePar( ) {
+    }*/
+    
+    public String getCuloarePar( ) {
         return culoarePar;
     }
+    
     public void setCuloarePar(String culoarePar) { 
         this.culoarePar=culoarePar;
+         this.numePng = "Par_" + this.index + "_" + this.culoarePar + ".png"; 
     }
          
     // met ToString rescrisa

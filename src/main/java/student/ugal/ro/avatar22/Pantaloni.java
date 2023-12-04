@@ -1,49 +1,82 @@
 package student.ugal.ro.avatar22;
 
 public class Pantaloni extends Avatar {
-    final int nrModele=3; //cate modele de pantaloni avem; nu se modifica!
-    int indiceModel; //numarul modelului curent selectat de utilizator
-    int indiceCuloare; //numarul culorii curente selectate de utilizator
+    boolean dres;
+    private String color;
+    private int index;
+    private String numePng;
     
-    Pantaloni() { //constructor fara argumente
-        super();
-        this.indiceModel=0;
-        this.indiceCuloare=0;
+
+    public Pantaloni() {
+        super();  
+        this.dres=false;
+        this.color="";
+        this.index=0;
+        this.numePng="";
+    }
+
+    
+    public Pantaloni(boolean dres,int index, String color, int layer, int pozitieX, int pozitieY)
+    {
+        super(layer, pozitieX, pozitieY);  
+        this.dres=dres;
+        this.color = color;
+        this.index = index;
+        this.numePng="Pantaloni_"+this.index+"_"+this.color+".png";
     }
     
-    Pantaloni(int indiceModel, int indiceCuloare) { //constructor cu argumente
-        super();
-        this.indiceModel=indiceModel;
-        this.indiceCuloare=indiceCuloare;
+    public Pantaloni(Pantaloni pt)
+    {
+        super(pt);
+        this.dres=pt.dres;
+        this.color=pt.color;
+        this.index=pt.index;
+        this.numePng=pt.numePng;
+    }
+   
+    
+    public int getIndex()
+    {
+        return index;
+    }
+
+    public void setIndex(int index)
+    {
+        this.index = index;
+        this.numePng="Pantaloni_"+this.index+"_"+this.color+".png";
     }
     
-    Pantaloni (Pantaloni p){ //constructor de copiere
-        this.indiceModel=p.indiceModel;
-        this.indiceCuloare=p.indiceCuloare;
+    public String getNumePng()
+    {
+        return numePng;
     }
-    
-    int getNrModele() { 
-        /*va intoarce cate modele de pantaloni avem, ca sa stim in fereastra
-        grafica de cate ori poate face Next si Back utilizatorul*/
-        return nrModele;
+/*
+    public void setNumePng(String numePng)
+    {
+        this.numePng = numePng;
     }
+    */
     
-    int getIndiceModel() {
-        /*va intoarce indicele modelului curent de pantalon selectat de 
-        utilizator, ca sa stim ce fisier sa alegem pentru afisare*/
-        return indiceModel;
+    public String getColor()
+    {
+        return color;
     }
-    
-    int getIndiceCuloare() {
-        /*va intoarce indicele culorii curente de pantalon selectate de 
-        utilizator, ca sa stim ce fisier sa alegem pentru afisare*/
-        return indiceCuloare;
+
+    public void setColor(String color)
+    {
+        this.color = color;
+        this.numePng="Pantaloni_"+this.index+"_"+this.color+".png";
     }
     
     @Override
-    public String toString(){
-        return "Pantalonul ales are modelul "+indiceModel+
-               " si culoarea "+culori[indiceCuloare]+
-               " si se gaseste in fisierul "+numeFisierePantaloni[indiceModel][indiceCuloare];
-    }
+public String toString() {
+    
+    if(this.dres){
+    return super.toString() + "\nDresul  "+ " de coloarea = " + this.color
+            +" cu indexul = " + this.index + ", iar numele fisierlui e " + this.numePng;}
+    else {
+    return super.toString() + "\nPantalonii sunt de coloarea = " + this.color
+            +" cu indexul = " + this.index + ", iar numele fisierlui e " + this.numePng;}
 }
+}  
+
