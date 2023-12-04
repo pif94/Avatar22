@@ -1,83 +1,49 @@
 package student.ugal.ro.avatar22;
 
 public class Pantofi extends Avatar {
-    boolean cold;
-    private String color;
-    private int index;
-    private String numePng;
+    final int nrModele=3; //cate modele de pantofi avem; nu se modifica!
+    int indiceModel; //numarul modelului curent selectat de utilizator
+    int indiceCuloare; //numarul culorii curente selectate de utilizator
     
-
-    public Pantofi() {
-        super();  
-        this.cold=false;
-        this.color="";
-        this.index=0;
-        this.numePng="";
-    }
-
-    
-    public Pantofi(boolean cold,int index, String color, int layer, int pozitieX, int pozitieY)
-    {
-        super(layer, pozitieX, pozitieY);  
-        this.cold=cold;
-        this.color = color;
-        this.index = index;
-        this.numePng="Pantofi_"+this.index+"_"+this.color+".png";
+    Pantofi() { //constructor fara argumente
+        super();
+        this.indiceModel=0;
+        this.indiceCuloare=0;
     }
     
-    public Pantofi(Pantofi pf)
-    {
-        super(pf);
-        this.cold=pf.cold;
-        this.color=pf.color;
-        this.index=pf.index;
-        this.numePng=pf.numePng;
-    }
-   
-    
-    public int getIndex()
-    {
-        return index;
-    }
-
-    public void setIndex(int index)
-    {
-        this.index = index;
-        this.numePng="Pantofi_"+this.index+"_"+this.color+".png";
+    Pantofi(int indiceModel, int indiceCuloare) { //constructor cu argumente
+        super();
+        this.indiceModel=indiceModel;
+        this.indiceCuloare=indiceCuloare;
     }
     
-    public String getNumePng()
-    {
-        return numePng;
+    Pantofi (Pantofi p){ //constructor de copiere
+        this.indiceModel=p.indiceModel;
+        this.indiceCuloare=p.indiceCuloare;
     }
-/*
-    public void setNumePng(String numePng)
-    {
-        this.numePng = numePng;
-    }
-    */
     
-    public String getColor()
-    {
-        return color;
+    int getNrModele() {
+        /*va intoarce cate modele de pantofi avem, ca sa stim in fereastra
+        grafica de cate ori poate face Next si Back utilizatorul*/
+        return nrModele;
     }
-
-    public void setColor(String color)
-    {
-        this.color = color;
-        this.numePng="Pantofi_"+this.index+"_"+this.color+".png";
+    
+    int getIndiceModel() {
+        /*va intoarce indicele modelului curent de pantofi selectat de 
+        utilizator, ca sa stim ce fisier sa alegem pentru afisare*/
+        return indiceModel;
+    }
+    
+    int getIndiceCuloare() {
+        /*va intoarce indicele culorii curente de pantofi selectate de 
+        utilizator, ca sa stim ce fisier sa alegem pentru afisare*/
+        return indiceCuloare;
     }
     
     @Override
-public String toString() {
-    
-    if(this.cold){
-    return super.toString() + "\nPantofii sunt din colectia Toamna/Iarna"+ " cu coloarea = " + this.color
-            +" cu indexul = " + this.index + ", iar numele fisierlui e " + this.numePng;}
-    else {
-    return super.toString() + "\nPantofii sunt din colectia Primavara.Vara"+ " cu coloarea = " + this.color
-            +" cu indexul = " + this.index + ", iar numele fisierlui e " + this.numePng;}
+    public String toString(){
+        return "Pantofii alesi au modelul "+indiceModel+
+               " si culoarea "+culori[indiceCuloare]+
+               " si se gasesc in fisierul "+numeFisierePantofi[indiceModel][indiceCuloare];
+    }
 }
-}
-    
-
