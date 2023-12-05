@@ -68,6 +68,8 @@ public class Pantaloni extends Avatar {
         this.numePng="Pantaloni_"+this.index+"_"+this.color+".png";
     }
     
+    //comentariu
+    
     @Override
 public String toString() {
     
