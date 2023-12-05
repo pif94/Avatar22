@@ -19,7 +19,7 @@ public class Bluza extends Avatar{
         this.numePng="Bluza_"+this.index+".png";
         
     }
-
+//comment added for the branch
     
     public Bluza(boolean gros,  int index, String color, int layer, int pozitieX, int pozitieY)
     {
