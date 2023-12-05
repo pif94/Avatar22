@@ -20,7 +20,7 @@ public class Bluza extends Avatar{
         
     }
 //comment added for the branch
-    
+//new comment 2
     public Bluza(boolean gros,  int index, String color, int layer, int pozitieX, int pozitieY)
     {
         super(layer, pozitieX, pozitieY);
