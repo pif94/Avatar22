@@ -177,7 +177,7 @@ public class AvatarTest {
                     Bluza bluza4= new Bluza(false,4, "albastru",2,360,750);
                     Bluza bluza5= new Bluza(false,5, "roz",3,0,0);
                     Bluza bluza6= new Bluza(true,6, "negru",3,332,680);
-                    Bluza bluza7= new Bluza(true,7, "portocaliu",4,355,680);
+                    Bluza bluza7= new Bluza(true,7, "portocaliu",3,355,680);
                     Bluza bluza8= new Bluza(true,8, "rosu",5,360,700);
                     Bluza bluza9= new Bluza(false,9, "verde",6,100,350);
                     Bluza bluza10= new Bluza(bluza9);
@@ -202,9 +202,9 @@ public class AvatarTest {
                     Fusta fusta1=new Fusta();
                     Fusta fusta2= new Fusta(2, "alb",1,355,1100);
                     Fusta fusta3= new Fusta(3, "mov",1,350,1150);
-                    Fusta fusta4= new Fusta(4,"albastru",1,360,1160);
+                    Fusta fusta4= new Fusta(4,"albastru",3,360,1160);
                     Fusta fusta5= new Fusta(5,"roz",1,370,1170);
-                    Fusta fusta6= new Fusta(6, "negru",1,380,1180);
+                    Fusta fusta6= new Fusta(6, "negru",3,380,1180);
                     Fusta fusta7= new Fusta(7,"portocaliu",1,390,1190);
                     Fusta fusta8= new Fusta(8,"rosu",1,400,1200);
                     Fusta fusta9= new Fusta(9,"verde",1,410,1210);
@@ -224,6 +224,35 @@ public class AvatarTest {
                     {
                         System.out.println(fusta + "\n");
                     }
+                    
+                    //Pentru filtru bluza
+                    int t; int layerBluza;
+                    System.out.println("Introduceti 1 pt colectia de iarna sau 2 pt cea de vara.");
+                    t=scanner.nextInt();
+                    System.out.println("Pe ce layer sa fie obiectul? (1-6)");
+                    layerBluza=scanner.nextInt();
+                    boolean filtru;
+                    
+                    if (t == 1 ) {filtru = true;}
+                    else  {filtru = false;}
+
+                    for (Bluza bluza : bluzaListT){
+
+                        if (bluza.isGros() == filtru && bluza.getLayer()==layerBluza)
+                     System.out.println(bluza + "\n");
+
+                        }
+                     //Pentru filtru fusta
+                    String culoareFiltru; int layerFusta;
+                    System.out.println("Ce culoare sa fie fusta?");
+                    culoareFiltru=scanner.next();
+                    System.out.println("Pe ce layer sa fie obiectul? (1-3)");
+                    layerFusta=scanner.nextInt(); 
+                     for (Fusta fusta : fustaListT){
+
+                        if (fusta.getColor().equals(culoareFiltru) && fusta.getLayer()==layerFusta)
+                     System.out.println(fusta + "\n");
+                        }
                              
                     break;
                 case 4:
