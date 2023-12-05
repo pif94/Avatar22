@@ -1,6 +1,8 @@
 student\ugal\ro\avatar22\Fusta.class
 student\ugal\ro\avatar22\Palarie.class
+graphics\AvatarJFrame$3.class
 graphics\AvatarJFrame.class
+graphics\ImageScaler.class
 student\ugal\ro\avatar22\Pantaloni.class
 student\ugal\ro\avatar22\Avatar.class
 graphics\AvatarJFrame$1.class
@@ -10,4 +12,5 @@ student\ugal\ro\avatar22\Par.class
 student\ugal\ro\avatar22\Fata.class
 student\ugal\ro\avatar22\Bluza.class
 student\ugal\ro\avatar22\AvatarTest.class
+graphics\AvatarJFrame$2.class
 graphics\ImageReader.class

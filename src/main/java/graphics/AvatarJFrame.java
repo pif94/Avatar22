@@ -4,6 +4,7 @@
  */
 package graphics;
 
+import static graphics.ImageScaler.scaleImage;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Image;
@@ -12,6 +13,10 @@ import javax.swing.UIManager;
 import javax.swing.JLabel;
 import javax.swing.UnsupportedLookAndFeelException;
 import java.awt.AWTException;
+import java.awt.AlphaComposite;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.Robot;
@@ -19,10 +24,12 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
+import javax.swing.JColorChooser;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.filechooser.FileNameExtensionFilter;
+
 
 /**
  *
@@ -49,13 +56,15 @@ public class AvatarJFrame extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         pricipalPanel = new javax.swing.JPanel();
         mainAvatarLayeredPane = new javax.swing.JLayeredPane();
         backgroundAvatarBodyLabel = new javax.swing.JLabel();
-        fataLabel = new javax.swing.JLabel();
         saveButton = new javax.swing.JButton();
+        AccesoriButton = new javax.swing.JButton();
+        colorButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -74,66 +83,51 @@ public class AvatarJFrame extends javax.swing.JFrame {
         backgroundAvatarBodyLabel.setOpaque(true);
         backgroundAvatarBodyLabel.setHorizontalAlignment(JLabel.CENTER);
         backgroundAvatarBodyLabel.setVerticalAlignment(JLabel.CENTER);
-        ImageReader imageReader = new ImageReader("Resources\\C.jpg");
-        BufferedImage image = imageReader.getImage();
-        int maxWidth = 1000; // Adjust this value as needed
-        int maxHeight = 700; // Adjust this value as needed
-        double scale = Math.min((double) maxWidth / image.getWidth(), (double) maxHeight / image.getHeight());
-        int scaledWidth = (int) (image.getWidth() * scale);
-        int scaledHeight = (int) (image.getHeight() * scale);
-        Image scaledImage = image.getScaledInstance(scaledWidth, scaledHeight, Image.SCALE_SMOOTH);
-        ImageIcon imageIcon = new ImageIcon(scaledImage);
-        backgroundAvatarBodyLabel.setIcon(imageIcon);
-        backgroundAvatarBodyLabel.setPreferredSize(new Dimension(scaledWidth, scaledHeight));
+        ImageIcon scaledImage = scaleImage("Resources\\Corp.png", 1000, 700);
+        backgroundAvatarBodyLabel.setIcon(scaledImage);
         setLayout(new BorderLayout());
         add(backgroundAvatarBodyLabel, BorderLayout.CENTER);
 
-        ImageReader imageReader2 = new ImageReader("Resources\\B.png");
-        BufferedImage image2 = imageReader2.getImage();
-        int fixedWidth2 = 200;
-        int fixedHeight2 = 200;
-        double scale2 = Math.min((double) fixedWidth2 / image2.getWidth(), (double) fixedHeight2 / image2.getHeight());
-        int scaledWidth2 = (int) (image2.getWidth() * scale2);
-        int scaledHeight2 = (int) (image2.getHeight() * scale2);
-        Image scaledImage2 = image2.getScaledInstance(scaledWidth2, scaledHeight2, Image.SCALE_SMOOTH);
-        ImageIcon imageIcon2 = new ImageIcon(scaledImage2);
-
-        fataLabel.setIcon(imageIcon2);
-        fataLabel.setPreferredSize(new Dimension(scaledWidth2, scaledHeight2));
-        setLayout(new BorderLayout());
-        add(fataLabel, BorderLayout.CENTER);
-
         mainAvatarLayeredPane.setLayer(backgroundAvatarBodyLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        mainAvatarLayeredPane.setLayer(fataLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout mainAvatarLayeredPaneLayout = new javax.swing.GroupLayout(mainAvatarLayeredPane);
         mainAvatarLayeredPane.setLayout(mainAvatarLayeredPaneLayout);
         mainAvatarLayeredPaneLayout.setHorizontalGroup(
             mainAvatarLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainAvatarLayeredPaneLayout.createSequentialGroup()
-                .addContainerGap(120, Short.MAX_VALUE)
-                .addComponent(fataLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(113, 113, 113))
-            .addGroup(mainAvatarLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(backgroundAvatarBodyLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE))
+            .addComponent(backgroundAvatarBodyLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 433, Short.MAX_VALUE)
         );
         mainAvatarLayeredPaneLayout.setVerticalGroup(
             mainAvatarLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mainAvatarLayeredPaneLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(fataLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(439, Short.MAX_VALUE))
-            .addGroup(mainAvatarLayeredPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainAvatarLayeredPaneLayout.createSequentialGroup()
-                    .addComponent(backgroundAvatarBodyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 661, Short.MAX_VALUE)
-                    .addContainerGap()))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainAvatarLayeredPaneLayout.createSequentialGroup()
+                .addComponent(backgroundAvatarBodyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 668, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         saveButton.setText("Save");
         saveButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        saveButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        saveButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 saveButtonActionPerformed(evt);
+            }
+        });
+
+        AccesoriButton.setText("Accesori button");
+        AccesoriButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                AccesoriButtonActionPerformed(evt);
+            }
+        });
+
+        colorButton.setText("jButton1");
+        colorButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                colorButtonActionPerformed(evt);
             }
         });
 
@@ -144,8 +138,15 @@ public class AvatarJFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pricipalPanelLayout.createSequentialGroup()
                 .addContainerGap(385, Short.MAX_VALUE)
                 .addComponent(mainAvatarLayeredPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(263, 263, 263)
-                .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pricipalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pricipalPanelLayout.createSequentialGroup()
+                        .addGap(263, 263, 263)
+                        .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pricipalPanelLayout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addGroup(pricipalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(colorButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(AccesoriButton, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         pricipalPanelLayout.setVerticalGroup(
@@ -156,6 +157,10 @@ public class AvatarJFrame extends javax.swing.JFrame {
                     .addComponent(mainAvatarLayeredPane)
                     .addGroup(pricipalPanelLayout.createSequentialGroup()
                         .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(AccesoriButton, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(colorButton, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -216,6 +221,96 @@ public class AvatarJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_saveButtonActionPerformed
 
+    private void AccesoriButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_AccesoriButtonActionPerformed
+    {//GEN-HEADEREND:event_AccesoriButtonActionPerformed
+  try {
+      backgroundAvatarBodyLabel.repaint();
+        // Load the existing image
+        ImageIcon existingImageIcon = (ImageIcon) backgroundAvatarBodyLabel.getIcon();
+        Image existingImage = existingImageIcon.getImage();
+ImageIcon originalOverlayIcon = scaleImage("Resources\\accesori.png", getAvatarLabelWidth(), getAvatarLabelHeight());
+        BufferedImage originalOverlayImage = imageIconToBufferedImage(originalOverlayIcon);
+
+        // Create a BufferedImage for the modified overlay image
+        BufferedImage modifiedOverlayImage = new BufferedImage(getAvatarLabelWidth(), getAvatarLabelHeight(), BufferedImage.TYPE_INT_ARGB);
+        Graphics overlayGraphics = modifiedOverlayImage.getGraphics();
+        overlayGraphics.drawImage(originalOverlayImage, 0, 0, null);
+        overlayGraphics.dispose();
+
+        // Replace white pixels with the chosen color only on non-transparent pixels of the modified overlay
+        applyColorToOverlay(modifiedOverlayImage);
+
+        // Create a BufferedImage for the combined image
+        BufferedImage combinedImage = new BufferedImage(getAvatarLabelWidth(), getAvatarLabelHeight(), BufferedImage.TYPE_INT_ARGB);
+        Graphics g = combinedImage.getGraphics();
+
+        // Draw the existing image
+        g.drawImage(existingImage, 0, 0, null);
+
+        // Draw the modified overlay on top
+        g.drawImage(modifiedOverlayImage, 0, 0, null);
+
+        // Set the combined image as an icon for the existing label
+        backgroundAvatarBodyLabel.setIcon(new ImageIcon(combinedImage));
+
+        // Dispose of the graphics objects
+        g.dispose();
+    } catch (Exception e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(this, "Error overlaying second image");
+    }
+    }//GEN-LAST:event_AccesoriButtonActionPerformed
+
+    private void colorButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_colorButtonActionPerformed
+    {//GEN-HEADEREND:event_colorButtonActionPerformed
+          Color newColor = JColorChooser.showDialog(this, "Choose Color", chosenColor);
+    if (newColor != null) {
+        chosenColor = newColor;
+
+        // Trigger the redraw by simulating a click on the jButton1
+        AccesoriButtonActionPerformed(evt);
+    }
+    }//GEN-LAST:event_colorButtonActionPerformed
+
+
+    private BufferedImage imageIconToBufferedImage(ImageIcon icon) {
+    BufferedImage bufferedImage = new BufferedImage(icon.getIconWidth(), icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
+    Graphics g = bufferedImage.createGraphics();
+    icon.paintIcon(null, g, 0, 0);
+    g.dispose();
+    return bufferedImage;
+}
+    
+    private Color chosenColor = Color.WHITE; 
+    
+    private void replaceWhitePixels(BufferedImage image) {
+    for (int x = 0; x < image.getWidth(); x++) {
+        for (int y = 0; y < image.getHeight(); y++) {
+            int pixel = image.getRGB(x, y);
+            if (pixel == Color.WHITE.getRGB()) {
+                image.setRGB(x, y, chosenColor.getRGB());
+            }
+        }
+    }
+}
+    
+    private void applyColorToOverlay(BufferedImage image) {
+    for (int x = 0; x < image.getWidth(); x++) {
+        for (int y = 0; y < image.getHeight(); y++) {
+            int pixel = image.getRGB(x, y);
+
+            // Check if the pixel is not transparent
+            if ((pixel >> 24) != 0x00) {
+                // Check if the pixel is white
+                if ((pixel & 0xFFFFFF) == Color.WHITE.getRGB()) {
+                    // Apply the chosen color to non-transparent white pixels
+                    image.setRGB(x, y, chosenColor.getRGB());
+                }
+            }
+        }
+    }
+}
+    
     /**
      * @param args the command line arguments
      */
@@ -243,8 +338,9 @@ public class AvatarJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AccesoriButton;
     private javax.swing.JLabel backgroundAvatarBodyLabel;
-    private javax.swing.JLabel fataLabel;
+    private javax.swing.JButton colorButton;
     private javax.swing.JLayeredPane mainAvatarLayeredPane;
     private javax.swing.JPanel pricipalPanel;
     private javax.swing.JButton saveButton;

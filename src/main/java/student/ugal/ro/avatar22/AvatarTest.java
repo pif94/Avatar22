@@ -125,10 +125,10 @@ public class AvatarTest {
                     fataListF1.add(fata8);
                     fataListF1.add(fata9);
 
-                    for (Fata fata : fataListF1)
-                    {
-                        System.out.println(fata + "\n");
-                    }
+//                    for (Fata fata : fataListF1)
+//                    {
+//                        System.out.println(fata + "\n");
+//                    }
 
                     
                     //constructor implicit
@@ -147,6 +147,7 @@ public class AvatarTest {
 
                     ArrayList<Accesori> accesoriList2 = new ArrayList<>();
 
+                    //<editor-fold defaultstate="collapsed" desc="adaugare accesori la accesoriList2">
                     accesoriList2.add(accesori0);
                     accesoriList2.add(accesori1);
                     accesoriList2.add(accesori2);
@@ -158,11 +159,12 @@ public class AvatarTest {
                     accesoriList2.add(accesori8);
                     accesoriList2.add(accesori9);
                     
+//</editor-fold>
 
-                    for (Accesori accesori : accesoriList2)
-                    {
-                        System.out.println(accesori + "\n");
-                    }
+//                    for (Accesori accesori : accesoriList2)
+//                    {
+//                        System.out.println(accesori + "\n");
+//                    }
 
                     break;
                     
