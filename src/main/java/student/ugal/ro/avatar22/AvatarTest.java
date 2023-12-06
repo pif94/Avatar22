@@ -95,20 +95,24 @@ public class AvatarTest {
     // Final case 1                
                     break;
                 case 2:
- // constr. implict
+
+                    
+                    
+                    String def="";
+                    int ind=0;
+                    
+                    // constr. implict
                     Fata fata0 = new Fata();
 //public Fata( int index, String eyeColor, int layer,  int pozitieX, int pozitieY)
-                    Fata fata1 = new Fata(1,"Rosii",2,350,950);
-                    Fata fata2 = new Fata(5,"Albastrii",2,350,950);
-                    Fata fata3 = new Fata(3,"Alb",2,350,950);
-                    Fata fata4 = new Fata(9,"Verzi",2,350,950);
-                    Fata fata5 = new Fata(9,"Galbeni",2,350,950);
-                    Fata fata6 = new Fata(9,"Mov",2,350,950);
-                    Fata fata7 = new Fata(9,"Maronii",2,350,950);
-                    
+                    Fata fata1 = new Fata(0, "Rosii", 2, 350, 950);
+                    Fata fata2 = new Fata(1, "Albastrii", 1, 350, 950);
+                    Fata fata3 = new Fata(1, "Alb", 3, 350, 950);
+                    Fata fata4 = new Fata(2, "Verzi", 4, 350, 950);
+                    Fata fata5 = new Fata(3, "Galbeni", 7, 350, 950);
+                    Fata fata6 = new Fata(5, "Mov", 11, 350, 950);
+                    Fata fata7 = new Fata(8, "Maronii", 18, 350, 950);
 
                     //constr. copiere
-                    
                     Fata fata8 = new Fata(fata0);
                     Fata fata9 = new Fata(fata1);
 
@@ -125,22 +129,40 @@ public class AvatarTest {
                     fataListF1.add(fata8);
                     fataListF1.add(fata9);
 
-                    for (Fata fata : fataListF1)
-                    {
-                        System.out.println(fata + "\n");
-                    }
+                    
+                    System.out.println("Introduceti culoare pe care doriti sa o gasiti");
+                    scanner.nextLine();
+                    def = scanner.nextLine();
 
                     
+                    System.out.println("Introduceti indexul cautat");
+                    ind = scanner.nextInt();
+
+                    for (Fata fata : fataListF1)
+                    {
+                        if (def.equalsIgnoreCase(fata.getEyeColor()) || ind == fata.getIndex())
+                        {
+                            System.out.println(fata.toString() + "\n");
+                        }
+                    }
+
+//                 /*   for (Fata fata : fataListF1)
+//                    {
+//                        System.out.println(fata + "\n");
+//                    }*/
+                    
+                    boolean mirroredBool;
+                    int pozXScn;
                     //constructor implicit
                     Accesori accesori0 = new Accesori();
                     //public Accesori(boolean gros, boolean mirrored, int index, String color, int layer,  int pozitieX, int pozitieY)
-                    Accesori accesori1=new Accesori(false,false,1,"RosuRubiniu",1,305,240);
-                    Accesori accesori2=new Accesori(false,true,1,"AlbastruRegal",1,320,560);
-                    Accesori accesori3=new Accesori(true,false,1,"VerdeSmarald",1,335,920);
-                    Accesori accesori4=new Accesori(true,true,1,"GalbenAuriu",1,350,290);
-                    Accesori accesori5=new Accesori(false,false,1,"PortocaliuCoral",1,365,710);
-                    Accesori accesori6=new Accesori(true,false,1,"VioletAmetist",1,380,1160);
-                    Accesori accesori7=new Accesori(false,false,1,"GriPerlat",1,395,440);
+                    Accesori accesori1 = new Accesori(false, false, 3, "RosuRubiniu", 1, 305, 240);
+                    Accesori accesori2 = new Accesori(false, true, 1, "AlbastruRegal", 2, 320, 560);
+                    Accesori accesori3 = new Accesori(true, false, 4, "VerdeSmarald", 4, 335, 920);
+                    Accesori accesori4 = new Accesori(true, true, 5, "GalbenAuriu", 7, 350, 290);
+                    Accesori accesori5 = new Accesori(false, false, 9, "PortocaliuCoral", 11, 365, 710);
+                    Accesori accesori6 = new Accesori(true, false, 2, "VioletAmetist", 16, 380, 1160);
+                    Accesori accesori7 = new Accesori(false, false, 6, "GriPerlat", 22, 395, 440);
                     //constructor copiere
                     Accesori accesori8 = new Accesori(accesori1);
                     Accesori accesori9 = new Accesori(accesori5);
@@ -157,14 +179,33 @@ public class AvatarTest {
                     accesoriList2.add(accesori7);
                     accesoriList2.add(accesori8);
                     accesoriList2.add(accesori9);
-                    
 
+                   
+                    System.out.println("Accesoriul este in oglinda? (true/false)");
+                    mirroredBool=scanner.nextBoolean();
+                    
+                    
+                    
+                    System.out.println("Introduceti limita inferioara pentru pozitia orizontala");
+                    pozXScn=scanner.nextInt();
+
+               
                     for (Accesori accesori : accesoriList2)
                     {
-                        System.out.println(accesori + "\n");
+                        if(accesori.isMirrored()==mirroredBool&&accesori.getPozitieX()>=pozXScn)
+                        {
+                            System.out.println(accesori.toString() + "\n");
+                        }
                     }
+                    
+                    
+//                    for (Accesori accesori : accesoriList2)
+//                    {
+//                        System.out.println(accesori + "\n");
+//                    }
 
                     break;
+
                     
                 case 3:
                     
@@ -285,6 +326,7 @@ public class AvatarTest {
     }
         }while (alg!=0);
         scanner.close();
+ 
 
     }
 }
