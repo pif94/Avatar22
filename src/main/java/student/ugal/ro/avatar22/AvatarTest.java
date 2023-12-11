@@ -279,7 +279,36 @@ public class AvatarTest {
                     {
                         System.out.println(pantaloni + "\n");
                     }
-           
+                    //pt filtru pantofi
+                    int t1; int layerPantofi;
+                    System.out.println("Introduceti 1 pt colectia de iarna sau 2 pt cea de vara.");
+                    t1=scanner.nextInt();
+                    System.out.println("Pe ce layer sa fie obiectul? (1-6)");
+                    layerPantofi=scanner.nextInt();
+                    boolean filtru1;
+                    
+                    if (t1 == 1 ) {filtru1 = true;}
+                    else  {filtru1 = false;}
+
+                    for (Pantofi pantofi : pantofiListT){
+                        if (pantofi.isGros() == filtru1 && pantofi.getLayer()==layerPantofi)
+                        System.out.println(pantofi + "\n");
+                    }
+                    //pt filtru pantaloni
+                    int t2; int layerPantaloni;
+                    System.out.println("Introduceti 1 pt colectia de iarna sau 2 pt cea de vara.");
+                    t2=scanner.nextInt();
+                    System.out.println("Pe ce layer sa fie obiectul? (1-6)");
+                    layerPantaloni=scanner.nextInt();
+                    boolean filtru2;
+                    
+                    if (t2 == 1 ) {filtru2 = true;}
+                    else  {filtru2 = false;}
+
+                    for (Pantaloni pantaloni : pantaloniListT){
+                        if (pantaloni.isDres() == filtru2 && pantaloni.getLayer()==layerPantaloni)
+                        System.out.println(pantaloni + "\n");
+                    }
             break;
         
     }
