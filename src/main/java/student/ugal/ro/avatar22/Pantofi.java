@@ -1,7 +1,7 @@
 package student.ugal.ro.avatar22;
 
 public class Pantofi extends Avatar {
-    boolean cold;
+    private boolean cold;
     private String color;
     private int index;
     private String numePng;
@@ -32,6 +32,11 @@ public class Pantofi extends Avatar {
         this.color=pf.color;
         this.index=pf.index;
         this.numePng=pf.numePng;
+    }
+    
+    public boolean isGros()
+    {
+        return cold;
     }
    
     
