@@ -61,6 +61,26 @@ public class Fata extends Avatar {
         this.blinking = blinking;
     }
 
+        public String getEyeColor()
+    {
+        return this.eyeColor;
+    }
+
+    public void setEyeColor(String eyeColor)
+    {
+        this.eyeColor = eyeColor;
+    }
+
+    public int getIndex()
+    {
+        return this.index;
+    }
+
+    public void setIndex(int index)
+    {
+        this.index = index;
+    }
+    
     //mod subtil de a indica faptul că avatarul este interactiv
     public void blink()
     {
@@ -102,6 +122,8 @@ public String toString() {
             + " ,cu indexul = " + this.index + " cu nume fisier png = " + this.namePng
             + " ochii inchisi = " + this.wink;
 }
+
+
 
 
 }
