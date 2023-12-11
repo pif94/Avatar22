@@ -92,6 +92,35 @@ public class AvatarTest {
                     {
                         System.out.println(palarie + "\n");
                     }
+                    
+      // Adaugare filtru Daria
+                    String colorPar;
+                    int layerPar;
+                System.out.println("Ce culoare sa fie obiectele de tip Par?"); 
+                    colorPar = scanner.next(); 
+                System.out.println("Pe ce layer sa fie obiectele de tip Par? (1-8)");
+                    layerPar = scanner.nextInt();                   
+                    for (Par par : parListT) {
+                        if (par.getCuloarePar().equals(colorPar) && par.getLayer() == layerPar) {
+                            System.out.println(par + "\n");
+                        }
+                    }
+
+
+
+                String colorPalarie;
+                int layerPalarie;
+            System.out.println("Ce culoare sa fie obiectele de tip Palarie?"); 
+                colorPalarie = scanner.next(); 
+            System.out.println("Pe ce layer sa fie obiectele de tip Palarie? (1-8)");
+                layerPalarie = scanner.nextInt();
+            for (Palarie palarie : palarieListT) {
+                  if (palarie.getCuloarePalarie().equals(colorPalarie) && palarie.getLayer() == layerPalarie) {
+                  System.out.println(palarie + "\n");
+                    }
+            }
+
+
     // Final case 1                
                     break;
                 case 2:
