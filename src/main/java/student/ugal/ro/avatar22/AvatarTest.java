@@ -95,15 +95,12 @@ public class AvatarTest {
     // Final case 1                
                     break;
                 case 2:
-
-                    
-                    
-                    String def="";
-                    int ind=0;
-                    
+                    String def = "";
+                    int ind = 0;
                     // constr. implict
                     Fata fata0 = new Fata();
-//public Fata( int index, String eyeColor, int layer,  int pozitieX, int pozitieY)
+                    
+                    //public Fata( int index, String eyeColor, int layer,  int pozitieX, int pozitieY)
                     Fata fata1 = new Fata(0, "Rosii", 2, 350, 950);
                     Fata fata2 = new Fata(1, "Albastrii", 1, 350, 950);
                     Fata fata3 = new Fata(1, "Alb", 3, 350, 950);
@@ -129,32 +126,38 @@ public class AvatarTest {
                     fataListF1.add(fata8);
                     fataListF1.add(fata9);
 
-                    
                     System.out.println("Introduceti culoare pe care doriti sa o gasiti");
                     scanner.nextLine();
                     def = scanner.nextLine();
 
-                    
                     System.out.println("Introduceti indexul cautat");
                     ind = scanner.nextInt();
 
+                    boolean fataFound=false;
+                    
                     for (Fata fata : fataListF1)
                     {
                         if (def.equalsIgnoreCase(fata.getEyeColor()) || ind == fata.getIndex())
                         {
                             System.out.println(fata.toString() + "\n");
+                            fataFound=true;
                         }
+                    }
+                    
+                    if(!fataFound)
+                    {
+                        System.out.println("Nicio fata nu indeplineste conditiile");
                     }
 
 //                 /*   for (Fata fata : fataListF1)
 //                    {
 //                        System.out.println(fata + "\n");
 //                    }*/
-                    
                     boolean mirroredBool;
                     int pozXScn;
                     //constructor implicit
                     Accesori accesori0 = new Accesori();
+                    
                     //public Accesori(boolean gros, boolean mirrored, int index, String color, int layer,  int pozitieX, int pozitieY)
                     Accesori accesori1 = new Accesori(false, false, 3, "RosuRubiniu", 1, 305, 240);
                     Accesori accesori2 = new Accesori(false, true, 1, "AlbastruRegal", 2, 320, 560);
@@ -164,6 +167,7 @@ public class AvatarTest {
                     Accesori accesori6 = new Accesori(true, false, 2, "VioletAmetist", 16, 380, 1160);
                     Accesori accesori7 = new Accesori(false, false, 6, "GriPerlat", 22, 395, 440);
                     //constructor copiere
+                    
                     Accesori accesori8 = new Accesori(accesori1);
                     Accesori accesori9 = new Accesori(accesori5);
 
@@ -180,32 +184,35 @@ public class AvatarTest {
                     accesoriList2.add(accesori8);
                     accesoriList2.add(accesori9);
 
-                   
                     System.out.println("Accesoriul este in oglinda? (true/false)");
-                    mirroredBool=scanner.nextBoolean();
-                    
-                    
-                    
-                    System.out.println("Introduceti limita inferioara pentru pozitia orizontala");
-                    pozXScn=scanner.nextInt();
+                    mirroredBool = scanner.nextBoolean();
 
-               
+                    System.out.println("Introduceti limita inferioara pentru pozitia orizontala");
+                    pozXScn = scanner.nextInt();
+                    
+                    boolean accesoriuFound=false;
+
                     for (Accesori accesori : accesoriList2)
                     {
-                        if(accesori.isMirrored()==mirroredBool&&accesori.getPozitieX()>=pozXScn)
+                        if (accesori.isMirrored() == mirroredBool && accesori.getPozitieX() >= pozXScn)
                         {
                             System.out.println(accesori.toString() + "\n");
+                            accesoriuFound=true;
                         }
                     }
                     
-                    
+                    if(!accesoriuFound)
+                    {
+                        System.out.println("Niciun accesoriu nu indeplineste conditiile");
+                    }
+
 //                    for (Accesori accesori : accesoriList2)
 //                    {
 //                        System.out.println(accesori + "\n");
 //                    }
 
                     break;
-
+                    
                     
                 case 3:
                     
