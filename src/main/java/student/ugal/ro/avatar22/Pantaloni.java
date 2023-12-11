@@ -1,7 +1,7 @@
 package student.ugal.ro.avatar22;
 
 public class Pantaloni extends Avatar {
-    boolean dres;
+    private boolean dres;
     private String color;
     private int index;
     private String numePng;
@@ -33,7 +33,11 @@ public class Pantaloni extends Avatar {
         this.index=pt.index;
         this.numePng=pt.numePng;
     }
-   
+    
+    public boolean isDres()
+    {
+        return dres;
+    }
     
     public int getIndex()
     {
