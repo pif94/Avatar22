@@ -25,7 +25,7 @@ public class Fusta extends Avatar{
         super(layer, pozitieX, pozitieY);        
         this.color = color;
         this.index = index;
-        this.numePng="Fusta_"+this.index+"_"+this.color+".png";
+        this.numePng="fusta_"+this.index+"_"+this.color+".png";
     }
     
     public Fusta(Fusta f)

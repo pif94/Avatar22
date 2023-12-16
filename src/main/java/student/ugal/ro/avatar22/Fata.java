@@ -35,7 +35,7 @@ public class Fata extends Avatar {
         this.blinking = false;
         this.eyeColor = eyeColor;
         this.index = index;
-        this.namePng = "Fata_"+this.index+"_"+this.eyeColor+".png";
+        this.namePng = "fata_"+this.index+"_"+this.eyeColor+".png";
         this.wink = false;
     }
 
@@ -80,6 +80,16 @@ public class Fata extends Avatar {
     {
         this.index = index;
     }
+
+    public String getNamePng() {
+        return namePng;
+    }
+
+    public void setNamePng(String namePng) {
+        this.namePng = namePng;
+    }
+    
+    
     
     //mod subtil de a indica faptul că avatarul este interactiv
     public void blink()
