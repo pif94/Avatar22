@@ -12,13 +12,7 @@ public class AvatarTest {
     {
         try{
         Scanner scanner = new Scanner(System.in); //de comentat dupa modificari
-        //de adaugat obiectele tip file pt fiecare caz
-         File file = new File("bluzain.txt");
-         File out = new File("bluzaout.txt");
-         
-         //de creat scanere si printere individuale pt fiecare clasa
-         Scanner bin = new Scanner(file);
-         PrintWriter bout = new PrintWriter(out);
+       
         int alg;
 
         do
@@ -32,102 +26,8 @@ public class AvatarTest {
             {
 //start case 1
                 case 1:
-        Par p1 = new Par(1, "alb",1,350,1000); 
-        Par p2 = new Par(2,"albastru", 2,340,1050); 
-        //Par p3 = new Par(p2); 
-        Par p3 = new Par(3, "mov", 3,366,950);
-        Palarie pa1 = new Palarie(1, "mov", 1, 300,1000); 
-        Palarie pa2 = new Palarie(2, "negru ", 2,250,900); 
-      //  Palarie pa3 = new Palarie(pa2); 
-        Palarie pa3 = new Palarie(3,"maro", 3,266,850);
 
-        System.out.println(p1);
-        System.out.println(p2);
-        System.out.println(p3);
-        System.out.println(pa1);
-        System.out.println(pa2);
-        System.out.println(pa3);
-        ArrayList<Par> parListT = new ArrayList<>();
-                    Par par1=new Par();
-                    Par par2= new Par(1, "alb", 1,350,1000);
-                    Par par3= new Par(2, "albastru", 2,333,1050);
-                    Par par4= new Par(3,"galben", 3,365,1100); 
-                    Par par5= new Par(4,"maro", 4,321,980);
-                    Par par6= new Par(5, "mov", 5,335,480); 
-                    Par par7= new Par(6,"negru", 6,400,1000); 
-                    Par par8= new Par(7,"portocaliu", 7,370,130);
-                    Par par9= new Par(8,"rosu", 8,300,1051);
-                    Par par10= new Par(par9);
-
-                     parListT.add(par1);
-                      parListT.add(par2);
-                       parListT.add(par3);
-                        parListT.add(par4);
-                         parListT.add(par5);
-                          parListT.add(par6);
-                           parListT.add(par7);
-                            parListT.add(par8);
-                             parListT.add(par9);
-                              parListT.add(par10);
-                    for (Par par : parListT)
-                    {
-                        System.out.println(par + "\n");
-                    }
-   
-        ArrayList<Palarie> palarieListT = new ArrayList<>();
-                    Palarie palarie1=new Palarie();
-                    Palarie palarie2= new Palarie(1,  "alb", 1, 400, 1000);
-                    Palarie palarie3= new Palarie(2,  "albastru", 2, 387, 950); 
-                    Palarie palarie4= new Palarie(3, "galben", 3, 360, 980); 
-                    Palarie palarie5= new Palarie(4,  "maro", 4, 350, 1000); 
-                    Palarie palarie6= new Palarie(5,  "mov", 5, 370, 990); 
-                    Palarie palarie7= new Palarie(6,  "negru", 6, 380, 990); 
-                    Palarie palarie8= new Palarie(7,  "portocaliu", 7, 380, 980 );
-                    Palarie palarie9= new Palarie(8, "rosu", 8, 410, 1010); 
-                    Palarie palarie10= new Palarie(palarie9);
-                    
-                     palarieListT.add(palarie1);
-                      palarieListT.add(palarie2);
-                       palarieListT.add(palarie3);
-                        palarieListT.add(palarie4);
-                         palarieListT.add(palarie5);
-                          palarieListT.add(palarie6);
-                           palarieListT.add(palarie7);
-                            palarieListT.add(palarie8);
-                             palarieListT.add(palarie9);
-                              palarieListT.add(palarie10);
-                    for (Palarie palarie : palarieListT)
-                    {
-                        System.out.println(palarie + "\n");
-                    }
-                    
-      // Adaugare filtru Daria
-                    String colorPar;
-                    int layerPar;
-                System.out.println("Ce culoare sa fie obiectele de tip Par?"); 
-                    colorPar = scanner.next(); 
-                System.out.println("Pe ce layer sa fie obiectele de tip Par? (1-8)");
-                    layerPar = scanner.nextInt();                   
-                    for (Par par : parListT) {
-                        if (par.getCuloarePar().equals(colorPar) && par.getLayer() == layerPar) {
-                            System.out.println(par + "\n");
-                        }
-                    }
-
-
-
-                String colorPalarie;
-                int layerPalarie;
-            System.out.println("Ce culoare sa fie obiectele de tip Palarie?"); 
-                colorPalarie = scanner.next(); 
-            System.out.println("Pe ce layer sa fie obiectele de tip Palarie? (1-8)");
-                layerPalarie = scanner.nextInt();
-            for (Palarie palarie : palarieListT) {
-                  if (palarie.getCuloarePalarie().equals(colorPalarie) && palarie.getLayer() == layerPalarie) {
-                  System.out.println(palarie + "\n");
-                    }
-            }
-
+            
 
     // Final case 1                
                     break;
@@ -245,6 +145,13 @@ public class AvatarTest {
 
                     
                 case 3:
+                     //de adaugat obiectele tip file pt fiecare caz
+         File bluzafile = new File("bluzain.txt");
+         File bluzaout = new File("bluzaout.txt");
+         
+         //de creat scanere si printere individuale pt fiecare clasa
+         Scanner bin = new Scanner(bluzafile);
+         PrintWriter bout = new PrintWriter(bluzaout);
                     
                     //"alb","galben", "mov", "albastru", "roz",
                           // "negru", "portocaliu", "rosu", "verde", "maro"
@@ -323,17 +230,63 @@ public class AvatarTest {
                         bout.println(bluza + "\n");
                     }
                     
+                    bin.close();
+                    bout.close();
+                    
                     //fusta
+                    File fustafile = new File("fustain.txt");
+                     File fustaout = new File("fustaout.txt");
+         
+                    //de creat scanere si printere individuale pt fiecare clasa
+                     Scanner fustain = new Scanner(fustafile);
+                     PrintWriter fout = new PrintWriter(fustaout);
+                       String fustaCuloare;
+                       int fustaIndex;
+                       int fustaLayer, fustaX, fustaY;
+                    
                     ArrayList<Fusta> fustaListT = new ArrayList<>();
                     Fusta fusta1=new Fusta();
-                    Fusta fusta2= new Fusta(2, "alb",1,355,1100);
-                    Fusta fusta3= new Fusta(3, "mov",1,350,1150);
-                    Fusta fusta4= new Fusta(4,"albastru",3,360,1160);
-                    Fusta fusta5= new Fusta(5,"roz",1,370,1170);
-                    Fusta fusta6= new Fusta(6, "negru",3,380,1180);
-                    Fusta fusta7= new Fusta(7,"portocaliu",1,390,1190);
-                    Fusta fusta8= new Fusta(8,"rosu",1,400,1200);
-                    Fusta fusta9= new Fusta(9,"verde",1,410,1210);
+                    //de repetat
+                    fustaIndex=fustain.nextInt();
+                    fustaCuloare=fustain.next(); fustaLayer=fustain.nextInt();
+                    fustaX=fustain.nextInt(); fustaY=fustain.nextInt();
+                    Fusta fusta2= new Fusta(fustaIndex, fustaCuloare,fustaLayer,fustaX,fustaY);
+                   
+                     fustaIndex=fustain.nextInt();
+                    fustaCuloare=fustain.next(); fustaLayer=fustain.nextInt();
+                    fustaX=fustain.nextInt(); fustaY=fustain.nextInt();
+                    Fusta fusta3= new Fusta(fustaIndex, fustaCuloare,fustaLayer,fustaX,fustaY);
+                    
+                     fustaIndex=fustain.nextInt();
+                    fustaCuloare=fustain.next(); fustaLayer=fustain.nextInt();
+                    fustaX=fustain.nextInt(); fustaY=fustain.nextInt();
+                    Fusta fusta4= new Fusta(fustaIndex, fustaCuloare,fustaLayer,fustaX,fustaY);
+                    
+                     fustaIndex=fustain.nextInt();
+                    fustaCuloare=fustain.next(); fustaLayer=fustain.nextInt();
+                    fustaX=fustain.nextInt(); fustaY=fustain.nextInt();
+                    Fusta fusta5= new Fusta(fustaIndex, fustaCuloare,fustaLayer,fustaX,fustaY);
+                    
+                     fustaIndex=fustain.nextInt();
+                    fustaCuloare=fustain.next(); fustaLayer=fustain.nextInt();
+                    fustaX=fustain.nextInt(); fustaY=fustain.nextInt();
+                    Fusta fusta6= new Fusta(fustaIndex, fustaCuloare,fustaLayer,fustaX,fustaY);
+                    
+                     fustaIndex=fustain.nextInt();
+                    fustaCuloare=fustain.next(); fustaLayer=fustain.nextInt();
+                    fustaX=fustain.nextInt(); fustaY=fustain.nextInt();
+                    Fusta fusta7= new Fusta(fustaIndex, fustaCuloare,fustaLayer,fustaX,fustaY);
+                    
+                     fustaIndex=fustain.nextInt();
+                    fustaCuloare=fustain.next(); fustaLayer=fustain.nextInt();
+                    fustaX=fustain.nextInt(); fustaY=fustain.nextInt();
+                    Fusta fusta8= new Fusta(fustaIndex, fustaCuloare,fustaLayer,fustaX,fustaY);
+                    
+                     fustaIndex=fustain.nextInt();
+                    fustaCuloare=fustain.next(); fustaLayer=fustain.nextInt();
+                    fustaX=fustain.nextInt(); fustaY=fustain.nextInt();
+                    Fusta fusta9= new Fusta(fustaIndex, fustaCuloare,fustaLayer,fustaX,fustaY);
+                    
                     Fusta fusta10= new Fusta(fusta9);
                     
                      fustaListT.add(fusta1);
@@ -348,8 +301,11 @@ public class AvatarTest {
                      fustaListT.add(fusta10);
                     for (Fusta fusta : fustaListT)
                     {
-                        System.out.println(fusta + "\n");
+                        fout.println(fusta + "\n");
                     }
+                    
+                    fustain.close();
+                    fout.close();
                     
                     //Pentru filtru bluza
                     int t; int layerBluza;
@@ -469,8 +425,7 @@ public class AvatarTest {
     }
         }while (alg!=0);
         scanner.close();
-        bin.close();
-        bout.close();
+
         }
       catch(Exception e)
         {System.out.println(e);}
