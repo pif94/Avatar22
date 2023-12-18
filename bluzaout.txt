@@ -1,0 +1,30 @@
+Obiectul se afla pe Layer 0 aflat la pozitiile [0,0]
+Bluza este din colectia Primavara.Vara cu coloarea =  cu indexul = 0, iar numele fisierlui e Bluza_0.png
+
+Obiectul se afla pe Layer 1 aflat la pozitiile [350,700]
+Bluza este din colectia Primavara.Vara cu coloarea = alb cu indexul = 2, iar numele fisierlui e Bluza_2_alb.png
+
+Obiectul se afla pe Layer 2 aflat la pozitiile [300,650]
+Bluza este din colectia Primavara.Vara cu coloarea = mov cu indexul = 3, iar numele fisierlui e Bluza_3_mov.png
+
+Obiectul se afla pe Layer 2 aflat la pozitiile [360,750]
+Bluza este din colectia Primavara.Vara cu coloarea = albastru cu indexul = 4, iar numele fisierlui e Bluza_4_albastru.png
+
+Obiectul se afla pe Layer 3 aflat la pozitiile [0,0]
+Bluza este din colectia Primavara.Vara cu coloarea = roz cu indexul = 5, iar numele fisierlui e Bluza_5_roz.png
+
+Obiectul se afla pe Layer 3 aflat la pozitiile [332,680]
+Bluza este din colectia Toamna/Iarna cu coloarea = negru cu indexul = 6, iar numele fisierlui e Bluza_6_negru.png
+
+Obiectul se afla pe Layer 3 aflat la pozitiile [355,680]
+Bluza este din colectia Toamna/Iarna cu coloarea = portocaliu cu indexul = 7, iar numele fisierlui e Bluza_7_portocaliu.png
+
+Obiectul se afla pe Layer 5 aflat la pozitiile [360,700]
+Bluza este din colectia Toamna/Iarna cu coloarea = rosu cu indexul = 8, iar numele fisierlui e Bluza_8_rosu.png
+
+Obiectul se afla pe Layer 6 aflat la pozitiile [100,350]
+Bluza este din colectia Primavara.Vara cu coloarea = verde cu indexul = 9, iar numele fisierlui e Bluza_9_verde.png
+
+Obiectul se afla pe Layer 6 aflat la pozitiile [100,350]
+Bluza este din colectia Primavara.Vara cu coloarea = verde cu indexul = 9, iar numele fisierlui e Bluza_9_verde.png
+

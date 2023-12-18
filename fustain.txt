@@ -1,0 +1,8 @@
+2    alb   1 355 1100
+3    mov   1 350 1150
+4   albastru   3 360 1160
+5   roz   1 370 1170
+6 negru 3 380 1180
+7 portocaliu 1 390 1190
+8 rosu 1 400 1200
+9 verde 1 410 1210

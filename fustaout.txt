@@ -1,0 +1,30 @@
+Obiectul se afla pe Layer 0 aflat la pozitiile [0,0]
+Fusta este de coloarea =  cu indexul = 0, iar numele fisierlui e 
+
+Obiectul se afla pe Layer 1 aflat la pozitiile [355,1100]
+Fusta este de coloarea = alb cu indexul = 2, iar numele fisierlui e Fusta_2_alb.png
+
+Obiectul se afla pe Layer 1 aflat la pozitiile [350,1150]
+Fusta este de coloarea = mov cu indexul = 3, iar numele fisierlui e Fusta_3_mov.png
+
+Obiectul se afla pe Layer 3 aflat la pozitiile [360,1160]
+Fusta este de coloarea = albastru cu indexul = 4, iar numele fisierlui e Fusta_4_albastru.png
+
+Obiectul se afla pe Layer 1 aflat la pozitiile [370,1170]
+Fusta este de coloarea = roz cu indexul = 5, iar numele fisierlui e Fusta_5_roz.png
+
+Obiectul se afla pe Layer 3 aflat la pozitiile [380,1180]
+Fusta este de coloarea = negru cu indexul = 6, iar numele fisierlui e Fusta_6_negru.png
+
+Obiectul se afla pe Layer 1 aflat la pozitiile [390,1190]
+Fusta este de coloarea = portocaliu cu indexul = 7, iar numele fisierlui e Fusta_7_portocaliu.png
+
+Obiectul se afla pe Layer 1 aflat la pozitiile [400,1200]
+Fusta este de coloarea = rosu cu indexul = 8, iar numele fisierlui e Fusta_8_rosu.png
+
+Obiectul se afla pe Layer 1 aflat la pozitiile [410,1210]
+Fusta este de coloarea = verde cu indexul = 9, iar numele fisierlui e Fusta_9_verde.png
+
+Obiectul se afla pe Layer 1 aflat la pozitiile [410,1210]
+Fusta este de coloarea = verde cu indexul = 9, iar numele fisierlui e Fusta_9_verde.png
+
