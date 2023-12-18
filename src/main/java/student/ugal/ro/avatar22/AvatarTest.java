@@ -1,5 +1,6 @@
 package student.ugal.ro.avatar22;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Vector;
@@ -9,8 +10,15 @@ public class AvatarTest {
 
     public static void main(String[] args)
     {
-
-        Scanner scanner = new Scanner(System.in);
+        try{
+        Scanner scanner = new Scanner(System.in); //de comentat dupa modificari
+        //de adaugat obiectele tip file pt fiecare caz
+         File file = new File("bluzain.txt");
+         File out = new File("bluzaout.txt");
+         
+         //de creat scanere si printere individuale pt fiecare clasa
+         Scanner bin = new Scanner(file);
+         PrintWriter bout = new PrintWriter(out);
         int alg;
 
         do
@@ -124,12 +132,15 @@ public class AvatarTest {
     // Final case 1                
                     break;
                 case 2:
-                    String def = "";
-                    int ind = 0;
+
+                    
+                    
+                    String def="";
+                    int ind=0;
+                    
                     // constr. implict
                     Fata fata0 = new Fata();
-                    
-                    //public Fata( int index, String eyeColor, int layer,  int pozitieX, int pozitieY)
+//public Fata( int index, String eyeColor, int layer,  int pozitieX, int pozitieY)
                     Fata fata1 = new Fata(0, "Rosii", 2, 350, 950);
                     Fata fata2 = new Fata(1, "Albastrii", 1, 350, 950);
                     Fata fata3 = new Fata(1, "Alb", 3, 350, 950);
@@ -155,38 +166,32 @@ public class AvatarTest {
                     fataListF1.add(fata8);
                     fataListF1.add(fata9);
 
+                    
                     System.out.println("Introduceti culoare pe care doriti sa o gasiti");
                     scanner.nextLine();
                     def = scanner.nextLine();
 
+                    
                     System.out.println("Introduceti indexul cautat");
                     ind = scanner.nextInt();
 
-                    boolean fataFound=false;
-                    
                     for (Fata fata : fataListF1)
                     {
                         if (def.equalsIgnoreCase(fata.getEyeColor()) || ind == fata.getIndex())
                         {
                             System.out.println(fata.toString() + "\n");
-                            fataFound=true;
                         }
-                    }
-                    
-                    if(!fataFound)
-                    {
-                        System.out.println("Nicio fata nu indeplineste conditiile");
                     }
 
 //                 /*   for (Fata fata : fataListF1)
 //                    {
 //                        System.out.println(fata + "\n");
 //                    }*/
+                    
                     boolean mirroredBool;
                     int pozXScn;
                     //constructor implicit
                     Accesori accesori0 = new Accesori();
-                    
                     //public Accesori(boolean gros, boolean mirrored, int index, String color, int layer,  int pozitieX, int pozitieY)
                     Accesori accesori1 = new Accesori(false, false, 3, "RosuRubiniu", 1, 305, 240);
                     Accesori accesori2 = new Accesori(false, true, 1, "AlbastruRegal", 2, 320, 560);
@@ -196,7 +201,6 @@ public class AvatarTest {
                     Accesori accesori6 = new Accesori(true, false, 2, "VioletAmetist", 16, 380, 1160);
                     Accesori accesori7 = new Accesori(false, false, 6, "GriPerlat", 22, 395, 440);
                     //constructor copiere
-                    
                     Accesori accesori8 = new Accesori(accesori1);
                     Accesori accesori9 = new Accesori(accesori5);
 
@@ -213,35 +217,32 @@ public class AvatarTest {
                     accesoriList2.add(accesori8);
                     accesoriList2.add(accesori9);
 
+                   
                     System.out.println("Accesoriul este in oglinda? (true/false)");
-                    mirroredBool = scanner.nextBoolean();
-
-                    System.out.println("Introduceti limita inferioara pentru pozitia orizontala");
-                    pozXScn = scanner.nextInt();
+                    mirroredBool=scanner.nextBoolean();
                     
-                    boolean accesoriuFound=false;
+                    
+                    
+                    System.out.println("Introduceti limita inferioara pentru pozitia orizontala");
+                    pozXScn=scanner.nextInt();
 
+               
                     for (Accesori accesori : accesoriList2)
                     {
-                        if (accesori.isMirrored() == mirroredBool && accesori.getPozitieX() >= pozXScn)
+                        if(accesori.isMirrored()==mirroredBool&&accesori.getPozitieX()>=pozXScn)
                         {
                             System.out.println(accesori.toString() + "\n");
-                            accesoriuFound=true;
                         }
                     }
                     
-                    if(!accesoriuFound)
-                    {
-                        System.out.println("Niciun accesoriu nu indeplineste conditiile");
-                    }
-
+                    
 //                    for (Accesori accesori : accesoriList2)
 //                    {
 //                        System.out.println(accesori + "\n");
 //                    }
 
                     break;
-                    
+
                     
                 case 3:
                     
@@ -249,15 +250,63 @@ public class AvatarTest {
                           // "negru", "portocaliu", "rosu", "verde", "maro"
                     ArrayList<Bluza> bluzaListT = new ArrayList<>();
                     Bluza bluza1=new Bluza();
-                    Bluza bluza2= new Bluza(false,2, "alb",1,350,700);
-                    Bluza bluza3= new Bluza(false,3, "mov",2,300,650);
-                    Bluza bluza4= new Bluza(false,4, "albastru",2,360,750);
-                    Bluza bluza5= new Bluza(false,5, "roz",3,0,0);
-                    Bluza bluza6= new Bluza(true,6, "negru",3,332,680);
-                    Bluza bluza7= new Bluza(true,7, "portocaliu",3,355,680);
-                    Bluza bluza8= new Bluza(true,8, "rosu",5,360,700);
-                    Bluza bluza9= new Bluza(false,9, "verde",6,100,350);
-                    Bluza bluza10= new Bluza(bluza9);
+                    boolean bluzaCold;
+                    int bluzaIndex;
+                    String bluzaCuloare;
+                    int bluzaLayer;
+                    int bluzaX, bluzaY;
+                    
+                    
+                    //de copiat
+                    bluzaCold=bin.nextBoolean(); bluzaIndex=bin.nextInt();
+                    bluzaCuloare=bin.next(); bluzaLayer=bin.nextInt();
+                    bluzaX=bin.nextInt(); bluzaY=bin.nextInt();
+                    
+                    Bluza bluza2= new Bluza(bluzaCold,bluzaIndex, bluzaCuloare,bluzaLayer,bluzaX,bluzaY);
+                    // de repetat
+                     bluzaCold=bin.nextBoolean(); bluzaIndex=bin.nextInt();
+                    bluzaCuloare=bin.next(); bluzaLayer=bin.nextInt();
+                    bluzaX=bin.nextInt(); bluzaY=bin.nextInt();
+                    
+                    Bluza bluza3= new Bluza(bluzaCold,bluzaIndex, bluzaCuloare,bluzaLayer,bluzaX,bluzaY);
+                    
+                     bluzaCold=bin.nextBoolean(); bluzaIndex=bin.nextInt();
+                    bluzaCuloare=bin.next(); bluzaLayer=bin.nextInt();
+                    bluzaX=bin.nextInt(); bluzaY=bin.nextInt();
+                    
+                    Bluza bluza4= new Bluza(bluzaCold,bluzaIndex, bluzaCuloare,bluzaLayer,bluzaX,bluzaY);
+                    
+                     bluzaCold=bin.nextBoolean(); bluzaIndex=bin.nextInt();
+                    bluzaCuloare=bin.next(); bluzaLayer=bin.nextInt();
+                    bluzaX=bin.nextInt(); bluzaY=bin.nextInt();
+                    
+                    Bluza bluza5= new Bluza(bluzaCold,bluzaIndex, bluzaCuloare,bluzaLayer,bluzaX,bluzaY);
+                    
+                     bluzaCold=bin.nextBoolean(); bluzaIndex=bin.nextInt();
+                    bluzaCuloare=bin.next(); bluzaLayer=bin.nextInt();
+                    bluzaX=bin.nextInt(); bluzaY=bin.nextInt();
+                    
+                    Bluza bluza6= new Bluza(bluzaCold,bluzaIndex, bluzaCuloare,bluzaLayer,bluzaX,bluzaY);
+                    
+                     bluzaCold=bin.nextBoolean(); bluzaIndex=bin.nextInt();
+                    bluzaCuloare=bin.next(); bluzaLayer=bin.nextInt();
+                    bluzaX=bin.nextInt(); bluzaY=bin.nextInt();
+                    
+                    Bluza bluza7= new Bluza(bluzaCold,bluzaIndex, bluzaCuloare,bluzaLayer,bluzaX,bluzaY);
+                    
+                     bluzaCold=bin.nextBoolean(); bluzaIndex=bin.nextInt();
+                    bluzaCuloare=bin.next(); bluzaLayer=bin.nextInt();
+                    bluzaX=bin.nextInt(); bluzaY=bin.nextInt();
+                    
+                    Bluza bluza8= new Bluza(bluzaCold,bluzaIndex, bluzaCuloare,bluzaLayer,bluzaX,bluzaY);
+                    
+                     bluzaCold=bin.nextBoolean(); bluzaIndex=bin.nextInt();
+                    bluzaCuloare=bin.next(); bluzaLayer=bin.nextInt();
+                    bluzaX=bin.nextInt(); bluzaY=bin.nextInt();
+                    
+                    Bluza bluza9= new Bluza(bluzaCold,bluzaIndex, bluzaCuloare,bluzaLayer,bluzaX,bluzaY);
+
+                   Bluza bluza10= new Bluza(bluza9);
                     
                      bluzaListT.add(bluza1);
                       bluzaListT.add(bluza2);
@@ -271,7 +320,7 @@ public class AvatarTest {
                               bluzaListT.add(bluza10);
                     for (Bluza bluza : bluzaListT)
                     {
-                        System.out.println(bluza + "\n");
+                        bout.println(bluza + "\n");
                     }
                     
                     //fusta
@@ -420,7 +469,11 @@ public class AvatarTest {
     }
         }while (alg!=0);
         scanner.close();
- 
+        bin.close();
+        bout.close();
+        }
+      catch(Exception e)
+        {System.out.println(e);}
 
     }
 }
