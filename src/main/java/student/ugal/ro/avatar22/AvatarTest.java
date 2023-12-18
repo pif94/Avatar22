@@ -1,5 +1,6 @@
 package student.ugal.ro.avatar22;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Vector;
@@ -9,8 +10,15 @@ public class AvatarTest {
 
     public static void main(String[] args)
     {
-
-        Scanner scanner = new Scanner(System.in);
+        try{
+        Scanner scanner = new Scanner(System.in); //de comentat dupa modificari
+        //de adaugat obiectele tip file pt fiecare caz
+         File file = new File("bluzain.txt");
+         File out = new File("bluzaout.txt");
+         
+         //de creat scanere si printere individuale pt fiecare clasa
+         Scanner bin = new Scanner(file);
+         PrintWriter bout = new PrintWriter(out);
         int alg;
 
         do
@@ -242,15 +250,63 @@ public class AvatarTest {
                           // "negru", "portocaliu", "rosu", "verde", "maro"
                     ArrayList<Bluza> bluzaListT = new ArrayList<>();
                     Bluza bluza1=new Bluza();
-                    Bluza bluza2= new Bluza(false,2, "alb",1,350,700);
-                    Bluza bluza3= new Bluza(false,3, "mov",2,300,650);
-                    Bluza bluza4= new Bluza(false,4, "albastru",2,360,750);
-                    Bluza bluza5= new Bluza(false,5, "roz",3,0,0);
-                    Bluza bluza6= new Bluza(true,6, "negru",3,332,680);
-                    Bluza bluza7= new Bluza(true,7, "portocaliu",3,355,680);
-                    Bluza bluza8= new Bluza(true,8, "rosu",5,360,700);
-                    Bluza bluza9= new Bluza(false,9, "verde",6,100,350);
-                    Bluza bluza10= new Bluza(bluza9);
+                    boolean bluzaCold;
+                    int bluzaIndex;
+                    String bluzaCuloare;
+                    int bluzaLayer;
+                    int bluzaX, bluzaY;
+                    
+                    
+                    //de copiat
+                    bluzaCold=bin.nextBoolean(); bluzaIndex=bin.nextInt();
+                    bluzaCuloare=bin.next(); bluzaLayer=bin.nextInt();
+                    bluzaX=bin.nextInt(); bluzaY=bin.nextInt();
+                    
+                    Bluza bluza2= new Bluza(bluzaCold,bluzaIndex, bluzaCuloare,bluzaLayer,bluzaX,bluzaY);
+                    // de repetat
+                     bluzaCold=bin.nextBoolean(); bluzaIndex=bin.nextInt();
+                    bluzaCuloare=bin.next(); bluzaLayer=bin.nextInt();
+                    bluzaX=bin.nextInt(); bluzaY=bin.nextInt();
+                    
+                    Bluza bluza3= new Bluza(bluzaCold,bluzaIndex, bluzaCuloare,bluzaLayer,bluzaX,bluzaY);
+                    
+                     bluzaCold=bin.nextBoolean(); bluzaIndex=bin.nextInt();
+                    bluzaCuloare=bin.next(); bluzaLayer=bin.nextInt();
+                    bluzaX=bin.nextInt(); bluzaY=bin.nextInt();
+                    
+                    Bluza bluza4= new Bluza(bluzaCold,bluzaIndex, bluzaCuloare,bluzaLayer,bluzaX,bluzaY);
+                    
+                     bluzaCold=bin.nextBoolean(); bluzaIndex=bin.nextInt();
+                    bluzaCuloare=bin.next(); bluzaLayer=bin.nextInt();
+                    bluzaX=bin.nextInt(); bluzaY=bin.nextInt();
+                    
+                    Bluza bluza5= new Bluza(bluzaCold,bluzaIndex, bluzaCuloare,bluzaLayer,bluzaX,bluzaY);
+                    
+                     bluzaCold=bin.nextBoolean(); bluzaIndex=bin.nextInt();
+                    bluzaCuloare=bin.next(); bluzaLayer=bin.nextInt();
+                    bluzaX=bin.nextInt(); bluzaY=bin.nextInt();
+                    
+                    Bluza bluza6= new Bluza(bluzaCold,bluzaIndex, bluzaCuloare,bluzaLayer,bluzaX,bluzaY);
+                    
+                     bluzaCold=bin.nextBoolean(); bluzaIndex=bin.nextInt();
+                    bluzaCuloare=bin.next(); bluzaLayer=bin.nextInt();
+                    bluzaX=bin.nextInt(); bluzaY=bin.nextInt();
+                    
+                    Bluza bluza7= new Bluza(bluzaCold,bluzaIndex, bluzaCuloare,bluzaLayer,bluzaX,bluzaY);
+                    
+                     bluzaCold=bin.nextBoolean(); bluzaIndex=bin.nextInt();
+                    bluzaCuloare=bin.next(); bluzaLayer=bin.nextInt();
+                    bluzaX=bin.nextInt(); bluzaY=bin.nextInt();
+                    
+                    Bluza bluza8= new Bluza(bluzaCold,bluzaIndex, bluzaCuloare,bluzaLayer,bluzaX,bluzaY);
+                    
+                     bluzaCold=bin.nextBoolean(); bluzaIndex=bin.nextInt();
+                    bluzaCuloare=bin.next(); bluzaLayer=bin.nextInt();
+                    bluzaX=bin.nextInt(); bluzaY=bin.nextInt();
+                    
+                    Bluza bluza9= new Bluza(bluzaCold,bluzaIndex, bluzaCuloare,bluzaLayer,bluzaX,bluzaY);
+
+                   Bluza bluza10= new Bluza(bluza9);
                     
                      bluzaListT.add(bluza1);
                       bluzaListT.add(bluza2);
@@ -264,7 +320,7 @@ public class AvatarTest {
                               bluzaListT.add(bluza10);
                     for (Bluza bluza : bluzaListT)
                     {
-                        System.out.println(bluza + "\n");
+                        bout.println(bluza + "\n");
                     }
                     
                     //fusta
@@ -413,7 +469,11 @@ public class AvatarTest {
     }
         }while (alg!=0);
         scanner.close();
- 
+        bin.close();
+        bout.close();
+        }
+      catch(Exception e)
+        {System.out.println(e);}
 
     }
 }
