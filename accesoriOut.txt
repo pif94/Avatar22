@@ -1,0 +1,30 @@
+Obiectul se afla pe Layer 0 aflat la pozitiile [0,0]
+Accesoriul este gros = false cu coloarea =  oglindit = false, cu indexul = 0, nume fisier .png=
+
+Obiectul se afla pe Layer 1 aflat la pozitiile [305,240]
+Accesoriul este gros = false cu coloarea = rosu oglindit = false, cu indexul = 3, nume fisier .png=Acesorii_3_rosu.png
+
+Obiectul se afla pe Layer 2 aflat la pozitiile [320,560]
+Accesoriul este gros = false cu coloarea = albastru oglindit = true, cu indexul = 1, nume fisier .png=Acesorii_1_albastru.png
+
+Obiectul se afla pe Layer 4 aflat la pozitiile [335,920]
+Accesoriul este gros = true cu coloarea = verde oglindit = false, cu indexul = 4, nume fisier .png=Acesorii_4_verde.png
+
+Obiectul se afla pe Layer 7 aflat la pozitiile [350,290]
+Accesoriul este gros = true cu coloarea = galben oglindit = true, cu indexul = 5, nume fisier .png=Acesorii_5_galben.png
+
+Obiectul se afla pe Layer 11 aflat la pozitiile [365,710]
+Accesoriul este gros = false cu coloarea = portocaliu oglindit = false, cu indexul = 9, nume fisier .png=Acesorii_9_portocaliu.png
+
+Obiectul se afla pe Layer 16 aflat la pozitiile [380,1160]
+Accesoriul este gros = true cu coloarea = violet oglindit = false, cu indexul = 2, nume fisier .png=Acesorii_2_violet.png
+
+Obiectul se afla pe Layer 22 aflat la pozitiile [395,440]
+Accesoriul este gros = false cu coloarea = gri oglindit = false, cu indexul = 6, nume fisier .png=Acesorii_6_gri.png
+
+Obiectul se afla pe Layer 0 aflat la pozitiile [0,0]
+Accesoriul este gros = false cu coloarea =  oglindit = false, cu indexul = 0, nume fisier .png=
+
+Obiectul se afla pe Layer 11 aflat la pozitiile [365,710]
+Accesoriul este gros = false cu coloarea = portocaliu oglindit = false, cu indexul = 9, nume fisier .png=Acesorii_9_portocaliu.png
+

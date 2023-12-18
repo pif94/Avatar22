@@ -1,0 +1,7 @@
+0 rosii 2 350 950
+1 albastrii 1 350 950
+1 alb 3 350 950
+2 verzi 4 350 950
+3 galbeni 7 350 950
+5 mov 11 350 950
+8 maronii 18 350 950
