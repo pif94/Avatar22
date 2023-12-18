@@ -25,7 +25,9 @@ public class AvatarTest {
             switch (alg)
             {
 //start case 1
-               }
+                case 1:
+
+            
 
     // Final case 1                
                     break;
