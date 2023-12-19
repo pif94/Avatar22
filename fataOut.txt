@@ -1,0 +1,30 @@
+Obiectul se afla pe Layer 0 aflat la pozitiile [0,0]
+Fata cu ochii de culoare =  ,cu indexul = 0 cu nume fisier png =  ochii inchisi = false
+
+Obiectul se afla pe Layer 2 aflat la pozitiile [350,950]
+Fata cu ochii de culoare = rosii ,cu indexul = 0 cu nume fisier png = Fata_0_rosii.png ochii inchisi = false
+
+Obiectul se afla pe Layer 1 aflat la pozitiile [350,950]
+Fata cu ochii de culoare = albastrii ,cu indexul = 1 cu nume fisier png = Fata_1_albastrii.png ochii inchisi = false
+
+Obiectul se afla pe Layer 3 aflat la pozitiile [350,950]
+Fata cu ochii de culoare = alb ,cu indexul = 1 cu nume fisier png = Fata_1_alb.png ochii inchisi = false
+
+Obiectul se afla pe Layer 4 aflat la pozitiile [350,950]
+Fata cu ochii de culoare = verzi ,cu indexul = 2 cu nume fisier png = Fata_2_verzi.png ochii inchisi = false
+
+Obiectul se afla pe Layer 7 aflat la pozitiile [350,950]
+Fata cu ochii de culoare = galbeni ,cu indexul = 3 cu nume fisier png = Fata_3_galbeni.png ochii inchisi = false
+
+Obiectul se afla pe Layer 11 aflat la pozitiile [350,950]
+Fata cu ochii de culoare = mov ,cu indexul = 5 cu nume fisier png = Fata_5_mov.png ochii inchisi = false
+
+Obiectul se afla pe Layer 18 aflat la pozitiile [350,950]
+Fata cu ochii de culoare = maronii ,cu indexul = 8 cu nume fisier png = Fata_8_maronii.png ochii inchisi = false
+
+Obiectul se afla pe Layer 0 aflat la pozitiile [0,0]
+Fata cu ochii de culoare =  ,cu indexul = 0 cu nume fisier png =  ochii inchisi = false
+
+Obiectul se afla pe Layer 2 aflat la pozitiile [350,950]
+Fata cu ochii de culoare = rosii ,cu indexul = 0 cu nume fisier png = Fata_0_rosii.png ochii inchisi = false
+

@@ -264,50 +264,112 @@ public class AvatarTest {
     // Final case 1                
                     break;
                 case 2:
+                    File fataFile = new File("fataIn.txt");
+                    File fataOut = new File("fataOut.txt");
 
-                    
-                    
-                    String def="";
-                    int ind=0;
-                    
+                    Scanner fataScnIn = new Scanner(fataFile);
+                    PrintWriter fataPW = new PrintWriter(fataOut);
+
+                    ArrayList<Fata> fataList = new ArrayList<>();
+
                     // constr. implict
                     Fata fata0 = new Fata();
+
+                    int indexFata,
+                     layerFata,
+                     pozitieXFata,
+                     pozitieYFata;
+                    String eyeColorFata;
+
+                    indexFata = fataScnIn.nextInt();
+                    eyeColorFata = fataScnIn.next();
+                    layerFata = fataScnIn.nextInt();
+                    pozitieXFata = fataScnIn.nextInt();
+                    pozitieYFata = fataScnIn.nextInt();
 //public Fata( int index, String eyeColor, int layer,  int pozitieX, int pozitieY)
-                    Fata fata1 = new Fata(0, "Rosii", 2, 350, 950);
-                    Fata fata2 = new Fata(1, "Albastrii", 1, 350, 950);
-                    Fata fata3 = new Fata(1, "Alb", 3, 350, 950);
-                    Fata fata4 = new Fata(2, "Verzi", 4, 350, 950);
-                    Fata fata5 = new Fata(3, "Galbeni", 7, 350, 950);
-                    Fata fata6 = new Fata(5, "Mov", 11, 350, 950);
-                    Fata fata7 = new Fata(8, "Maronii", 18, 350, 950);
+                    Fata fata1 = new Fata(indexFata, eyeColorFata, layerFata, pozitieXFata, pozitieYFata);
+
+                    indexFata = fataScnIn.nextInt();
+                    eyeColorFata = fataScnIn.next();
+                    layerFata = fataScnIn.nextInt();
+                    pozitieXFata = fataScnIn.nextInt();
+                    pozitieYFata = fataScnIn.nextInt();
+
+                    Fata fata2 = new Fata(indexFata, eyeColorFata, layerFata, pozitieXFata, pozitieYFata);
+
+                    indexFata = fataScnIn.nextInt();
+                    eyeColorFata = fataScnIn.next();
+                    layerFata = fataScnIn.nextInt();
+                    pozitieXFata = fataScnIn.nextInt();
+                    pozitieYFata = fataScnIn.nextInt();
+
+                    Fata fata3 = new Fata(indexFata, eyeColorFata, layerFata, pozitieXFata, pozitieYFata);
+
+                    indexFata = fataScnIn.nextInt();
+                    eyeColorFata = fataScnIn.next();
+                    layerFata = fataScnIn.nextInt();
+                    pozitieXFata = fataScnIn.nextInt();
+                    pozitieYFata = fataScnIn.nextInt();
+
+                    Fata fata4 = new Fata(indexFata, eyeColorFata, layerFata, pozitieXFata, pozitieYFata);
+
+                    indexFata = fataScnIn.nextInt();
+                    eyeColorFata = fataScnIn.next();
+                    layerFata = fataScnIn.nextInt();
+                    pozitieXFata = fataScnIn.nextInt();
+                    pozitieYFata = fataScnIn.nextInt();
+
+                    Fata fata5 = new Fata(indexFata, eyeColorFata, layerFata, pozitieXFata, pozitieYFata);
+
+                    indexFata = fataScnIn.nextInt();
+                    eyeColorFata = fataScnIn.next();
+                    layerFata = fataScnIn.nextInt();
+                    pozitieXFata = fataScnIn.nextInt();
+                    pozitieYFata = fataScnIn.nextInt();
+
+                    Fata fata6 = new Fata(indexFata, eyeColorFata, layerFata, pozitieXFata, pozitieYFata);
+
+                    indexFata = fataScnIn.nextInt();
+                    eyeColorFata = fataScnIn.next();
+                    layerFata = fataScnIn.nextInt();
+                    pozitieXFata = fataScnIn.nextInt();
+                    pozitieYFata = fataScnIn.nextInt();
+
+                    Fata fata7 = new Fata(indexFata, eyeColorFata, layerFata, pozitieXFata, pozitieYFata);
 
                     //constr. copiere
                     Fata fata8 = new Fata(fata0);
                     Fata fata9 = new Fata(fata1);
 
-                    ArrayList<Fata> fataListF1 = new ArrayList<>();
+                    fataList.add(fata0);
+                    fataList.add(fata1);
+                    fataList.add(fata2);
+                    fataList.add(fata3);
+                    fataList.add(fata4);
+                    fataList.add(fata5);
+                    fataList.add(fata6);
+                    fataList.add(fata7);
+                    fataList.add(fata8);
+                    fataList.add(fata9);
 
-                    fataListF1.add(fata0);
-                    fataListF1.add(fata1);
-                    fataListF1.add(fata2);
-                    fataListF1.add(fata3);
-                    fataListF1.add(fata4);
-                    fataListF1.add(fata5);
-                    fataListF1.add(fata6);
-                    fataListF1.add(fata7);
-                    fataListF1.add(fata8);
-                    fataListF1.add(fata9);
+                    for (Fata fata : fataList)
+                    {
+                        fataPW.println(fata + "\n");
+                    }
 
-                    
+                    fataScnIn.close();
+                    fataPW.close();
+
+                    String def = "";
+                    int ind = 0;
                     System.out.println("Introduceti culoare pe care doriti sa o gasiti");
                     scanner.nextLine();
                     def = scanner.nextLine();
 
-                    
                     System.out.println("Introduceti indexul cautat");
                     ind = scanner.nextInt();
 
-                    for (Fata fata : fataListF1)
+                    for (Fata fata : fataList)
                     {
                         if (def.equalsIgnoreCase(fata.getEyeColor()) || ind == fata.getIndex())
                         {
@@ -315,28 +377,99 @@ public class AvatarTest {
                         }
                     }
 
-//                 /*   for (Fata fata : fataListF1)
-//                    {
-//                        System.out.println(fata + "\n");
-//                    }*/
-                    
-                    boolean mirroredBool;
-                    int pozXScn;
+                    ArrayList<Accesori> accesoriList2 = new ArrayList<>();
+
+                    File accesoriiFile = new File("accesoriIn.txt");
+                    File accesoriiOut = new File("accesoriOut.txt");
+
+                    Scanner accesoriiScnIn = new Scanner(accesoriiFile);
+                    PrintWriter accesoriiPW = new PrintWriter(accesoriiOut);
+
                     //constructor implicit
                     Accesori accesori0 = new Accesori();
                     //public Accesori(boolean gros, boolean mirrored, int index, String color, int layer,  int pozitieX, int pozitieY)
-                    Accesori accesori1 = new Accesori(false, false, 3, "RosuRubiniu", 1, 305, 240);
-                    Accesori accesori2 = new Accesori(false, true, 1, "AlbastruRegal", 2, 320, 560);
-                    Accesori accesori3 = new Accesori(true, false, 4, "VerdeSmarald", 4, 335, 920);
-                    Accesori accesori4 = new Accesori(true, true, 5, "GalbenAuriu", 7, 350, 290);
-                    Accesori accesori5 = new Accesori(false, false, 9, "PortocaliuCoral", 11, 365, 710);
-                    Accesori accesori6 = new Accesori(true, false, 2, "VioletAmetist", 16, 380, 1160);
-                    Accesori accesori7 = new Accesori(false, false, 6, "GriPerlat", 22, 395, 440);
-                    //constructor copiere
-                    Accesori accesori8 = new Accesori(accesori1);
-                    Accesori accesori9 = new Accesori(accesori5);
 
-                    ArrayList<Accesori> accesoriList2 = new ArrayList<>();
+                    boolean accesoriuGros,
+                     accesoriuOglinda;
+                    int indexAccesoriu,
+                     layerAccesoriu,
+                     pozitieXAccesoriu,
+                     pozitieYAccesoriu;
+                    String culoareAccesoriu;
+
+                    accesoriuGros = accesoriiScnIn.nextBoolean();
+                    accesoriuOglinda = accesoriiScnIn.nextBoolean();
+                    indexAccesoriu = accesoriiScnIn.nextInt();
+                    culoareAccesoriu = accesoriiScnIn.next();
+                    layerAccesoriu = accesoriiScnIn.nextInt();
+                    pozitieXAccesoriu = accesoriiScnIn.nextInt();
+                    pozitieYAccesoriu = accesoriiScnIn.nextInt();
+
+                    Accesori accesori1 = new Accesori(accesoriuGros, accesoriuOglinda, indexAccesoriu, culoareAccesoriu, layerAccesoriu, pozitieXAccesoriu, pozitieYAccesoriu);
+
+                    accesoriuGros = accesoriiScnIn.nextBoolean();
+                    accesoriuOglinda = accesoriiScnIn.nextBoolean();
+                    indexAccesoriu = accesoriiScnIn.nextInt();
+                    culoareAccesoriu = accesoriiScnIn.next();
+                    layerAccesoriu = accesoriiScnIn.nextInt();
+                    pozitieXAccesoriu = accesoriiScnIn.nextInt();
+                    pozitieYAccesoriu = accesoriiScnIn.nextInt();
+
+                    Accesori accesori2 = new Accesori(accesoriuGros, accesoriuOglinda, indexAccesoriu, culoareAccesoriu, layerAccesoriu, pozitieXAccesoriu, pozitieYAccesoriu);
+
+                    accesoriuGros = accesoriiScnIn.nextBoolean();
+                    accesoriuOglinda = accesoriiScnIn.nextBoolean();
+                    indexAccesoriu = accesoriiScnIn.nextInt();
+                    culoareAccesoriu = accesoriiScnIn.next();
+                    layerAccesoriu = accesoriiScnIn.nextInt();
+                    pozitieXAccesoriu = accesoriiScnIn.nextInt();
+                    pozitieYAccesoriu = accesoriiScnIn.nextInt();
+
+                    Accesori accesori3 = new Accesori(accesoriuGros, accesoriuOglinda, indexAccesoriu, culoareAccesoriu, layerAccesoriu, pozitieXAccesoriu, pozitieYAccesoriu);
+
+                    accesoriuGros = accesoriiScnIn.nextBoolean();
+                    accesoriuOglinda = accesoriiScnIn.nextBoolean();
+                    indexAccesoriu = accesoriiScnIn.nextInt();
+                    culoareAccesoriu = accesoriiScnIn.next();
+                    layerAccesoriu = accesoriiScnIn.nextInt();
+                    pozitieXAccesoriu = accesoriiScnIn.nextInt();
+                    pozitieYAccesoriu = accesoriiScnIn.nextInt();
+
+                    Accesori accesori4 = new Accesori(accesoriuGros, accesoriuOglinda, indexAccesoriu, culoareAccesoriu, layerAccesoriu, pozitieXAccesoriu, pozitieYAccesoriu);
+
+                    accesoriuGros = accesoriiScnIn.nextBoolean();
+                    accesoriuOglinda = accesoriiScnIn.nextBoolean();
+                    indexAccesoriu = accesoriiScnIn.nextInt();
+                    culoareAccesoriu = accesoriiScnIn.next();
+                    layerAccesoriu = accesoriiScnIn.nextInt();
+                    pozitieXAccesoriu = accesoriiScnIn.nextInt();
+                    pozitieYAccesoriu = accesoriiScnIn.nextInt();
+
+                    Accesori accesori5 = new Accesori(accesoriuGros, accesoriuOglinda, indexAccesoriu, culoareAccesoriu, layerAccesoriu, pozitieXAccesoriu, pozitieYAccesoriu);
+
+                    accesoriuGros = accesoriiScnIn.nextBoolean();
+                    accesoriuOglinda = accesoriiScnIn.nextBoolean();
+                    indexAccesoriu = accesoriiScnIn.nextInt();
+                    culoareAccesoriu = accesoriiScnIn.next();
+                    layerAccesoriu = accesoriiScnIn.nextInt();
+                    pozitieXAccesoriu = accesoriiScnIn.nextInt();
+                    pozitieYAccesoriu = accesoriiScnIn.nextInt();
+
+                    Accesori accesori6 = new Accesori(accesoriuGros, accesoriuOglinda, indexAccesoriu, culoareAccesoriu, layerAccesoriu, pozitieXAccesoriu, pozitieYAccesoriu);
+
+                    accesoriuGros = accesoriiScnIn.nextBoolean();
+                    accesoriuOglinda = accesoriiScnIn.nextBoolean();
+                    indexAccesoriu = accesoriiScnIn.nextInt();
+                    culoareAccesoriu = accesoriiScnIn.next();
+                    layerAccesoriu = accesoriiScnIn.nextInt();
+                    pozitieXAccesoriu = accesoriiScnIn.nextInt();
+                    pozitieYAccesoriu = accesoriiScnIn.nextInt();
+
+                    Accesori accesori7 = new Accesori(accesoriuGros, accesoriuOglinda, indexAccesoriu, culoareAccesoriu, layerAccesoriu, pozitieXAccesoriu, pozitieYAccesoriu);
+
+                    //constructor copiere
+                    Accesori accesori8 = new Accesori(accesori0);
+                    Accesori accesori9 = new Accesori(accesori5);
 
                     accesoriList2.add(accesori0);
                     accesoriList2.add(accesori1);
@@ -349,33 +482,33 @@ public class AvatarTest {
                     accesoriList2.add(accesori8);
                     accesoriList2.add(accesori9);
 
-                   
-                    System.out.println("Accesoriul este in oglinda? (true/false)");
-                    mirroredBool=scanner.nextBoolean();
-                    
-                    
-                    
-                    System.out.println("Introduceti limita inferioara pentru pozitia orizontala");
-                    pozXScn=scanner.nextInt();
-
-               
                     for (Accesori accesori : accesoriList2)
                     {
-                        if(accesori.isMirrored()==mirroredBool&&accesori.getPozitieX()>=pozXScn)
+                        accesoriiPW.println(accesori + "\n");
+                    }
+
+                    accesoriiScnIn.close();
+                    accesoriiPW.close();
+
+                    boolean mirroredBool;
+                    int pozXScn;
+                    System.out.println("Accesoriul este in oglinda? (true/false)");
+                    mirroredBool = scanner.nextBoolean();
+
+                    System.out.println("Introduceti limita inferioara pentru pozitia orizontala");
+                    pozXScn = scanner.nextInt();
+
+                    for (Accesori accesori : accesoriList2)
+                    {
+                        if (accesori.isMirrored() == mirroredBool && accesori.getPozitieX() >= pozXScn)
                         {
                             System.out.println(accesori.toString() + "\n");
                         }
                     }
-                    
-                    
-//                    for (Accesori accesori : accesoriList2)
-//                    {
-//                        System.out.println(accesori + "\n");
-//                    }
 
                     break;
 
-                    
+    
                 case 3:
                      //de adaugat obiectele tip file pt fiecare caz
          File bluzafile = new File("bluzain.txt");
