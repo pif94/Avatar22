@@ -570,16 +570,63 @@ public class AvatarTest {
                              
                     break;
                 case 4:
-        ArrayList<Pantofi> pantofiListT = new ArrayList<>();
+File pantofifile = new File("pantofiin.txt");
+                    File pantofiout = new File("pantofiout.txt");
+         
+                    //de creat scanere si printere individuale pt fiecare clasa
+                    Scanner pfin = new Scanner(pantofifile);
+                    PrintWriter pfout = new PrintWriter(pantofiout);
+                    ArrayList<Pantofi> pantofiListT = new ArrayList<>();
+                    
                     Pantofi pantofi1=new Pantofi();
-                    Pantofi pantofi2= new Pantofi(false, 1,  "alb", 1, 350, 1000);
-                    Pantofi pantofi3= new Pantofi(false, 2,  "albastru", 2, 380, 950);
-                    Pantofi pantofi4= new Pantofi(true, 3, "galben", 3, 360, 985); 
-                    Pantofi pantofi5= new Pantofi(false, 4,  "maro", 4, 370, 1000);
-                    Pantofi pantofi6= new Pantofi(true, 5,  "mov", 5, 370, 990); 
-                    Pantofi pantofi7= new Pantofi(false, 6,  "negru", 6, 380, 990); 
-                    Pantofi pantofi8= new Pantofi(true, 7,  "portocaliu", 7, 380, 980);
-                    Pantofi pantofi9= new Pantofi(false, 8, "rosu", 8, 400, 910);
+                    boolean pantofiCold;
+                    int pantofiIndex;
+                    String pantofiCuloare;
+                    int pantofiLayer;
+                    int pantofiX, pantofiY;
+                    
+                    
+                    //de copiat
+                    pantofiCold=pfin.nextBoolean(); pantofiIndex=pfin.nextInt();
+                    pantofiCuloare=pfin.next(); pantofiLayer=pfin.nextInt();
+                    pantofiX=pfin.nextInt(); pantofiY=pfin.nextInt();
+                    Pantofi pantofi2= new Pantofi(pantofiCold, pantofiIndex, pantofiCuloare, pantofiLayer, pantofiX, pantofiY);
+                    
+                    pantofiCold=pfin.nextBoolean(); pantofiIndex=pfin.nextInt();
+                    pantofiCuloare=pfin.next(); pantofiLayer=pfin.nextInt();
+                    pantofiX=pfin.nextInt(); pantofiY=pfin.nextInt();
+                    Pantofi pantofi3= new Pantofi(pantofiCold, pantofiIndex, pantofiCuloare, pantofiLayer, pantofiX, pantofiY);
+                    
+                    pantofiCold=pfin.nextBoolean(); pantofiIndex=pfin.nextInt();
+                    pantofiCuloare=pfin.next(); pantofiLayer=pfin.nextInt();
+                    pantofiX=pfin.nextInt(); pantofiY=pfin.nextInt();
+                    Pantofi pantofi4= new Pantofi(pantofiCold, pantofiIndex, pantofiCuloare, pantofiLayer, pantofiX, pantofiY);
+                   
+                    pantofiCold=pfin.nextBoolean(); pantofiIndex=pfin.nextInt();
+                    pantofiCuloare=pfin.next(); pantofiLayer=pfin.nextInt();
+                    pantofiX=pfin.nextInt(); pantofiY=pfin.nextInt();
+                    Pantofi pantofi5= new Pantofi(pantofiCold, pantofiIndex, pantofiCuloare, pantofiLayer, pantofiX, pantofiY);
+                    
+                    pantofiCold=pfin.nextBoolean(); pantofiIndex=pfin.nextInt();
+                    pantofiCuloare=pfin.next(); pantofiLayer=pfin.nextInt();
+                    pantofiX=pfin.nextInt(); pantofiY=pfin.nextInt();
+                    Pantofi pantofi6= new Pantofi(pantofiCold, pantofiIndex, pantofiCuloare, pantofiLayer, pantofiX, pantofiY);
+                   
+                    pantofiCold=pfin.nextBoolean(); pantofiIndex=pfin.nextInt();
+                    pantofiCuloare=pfin.next(); pantofiLayer=pfin.nextInt();
+                    pantofiX=pfin.nextInt(); pantofiY=pfin.nextInt();
+                    Pantofi pantofi7= new Pantofi(pantofiCold, pantofiIndex, pantofiCuloare, pantofiLayer, pantofiX, pantofiY);
+                    
+                    pantofiCold=pfin.nextBoolean(); pantofiIndex=pfin.nextInt();
+                    pantofiCuloare=pfin.next(); pantofiLayer=pfin.nextInt();
+                    pantofiX=pfin.nextInt(); pantofiY=pfin.nextInt();
+                    Pantofi pantofi8= new Pantofi(pantofiCold, pantofiIndex, pantofiCuloare, pantofiLayer, pantofiX, pantofiY);
+                    
+                    pantofiCold=pfin.nextBoolean(); pantofiIndex=pfin.nextInt();
+                    pantofiCuloare=pfin.next(); pantofiLayer=pfin.nextInt();
+                    pantofiX=pfin.nextInt(); pantofiY=pfin.nextInt();
+                    Pantofi pantofi9= new Pantofi(pantofiCold, pantofiIndex, pantofiCuloare, pantofiLayer, pantofiX, pantofiY);
+                    
                     Pantofi pantofi10= new Pantofi(pantofi9);
 
                      pantofiListT.add(pantofi1);
@@ -596,16 +643,67 @@ public class AvatarTest {
                     {
                         System.out.println(pantofi + "\n");
                     }
-        ArrayList<Pantaloni> pantaloniListT = new ArrayList<>();
+                    
+                    pfin.close();
+                    pfout.close();
+                    
+                    File pantalonifile = new File("pantaloniin.txt");
+                    File pantaloniout = new File("pantaloniout.txt");
+         
+                    //de creat scanere si printere individuale pt fiecare clasa
+                    Scanner pnin = new Scanner(pantalonifile);
+                    PrintWriter pnout = new PrintWriter(pantaloniout);
+                    
+                    ArrayList<Pantaloni> pantaloniListT = new ArrayList<>();
+                    
                     Pantaloni pantaloni1=new Pantaloni();
-                    Pantaloni pantaloni2= new Pantaloni(true, 1,  "alb", 1, 350, 1200);
-                    Pantaloni pantaloni3= new Pantaloni(false, 2,  "albastru", 2, 370, 1250);
-                    Pantaloni pantaloni4= new Pantaloni(false, 3, "galben", 3, 360, 1150); 
-                    Pantaloni pantaloni5= new Pantaloni(true, 4,  "maro", 4, 360, 1200);
-                    Pantaloni pantaloni6= new Pantaloni(false, 5,  "mov", 5, 370, 1300); 
-                    Pantaloni pantaloni7= new Pantaloni(false, 6,  "negru", 6, 370, 1100); 
-                    Pantaloni pantaloni8= new Pantaloni(false, 7,  "portocaliu", 7, 380, 1280);
-                    Pantaloni pantaloni9= new Pantaloni(false, 8, "rosu", 8, 350, 1200);
+                    boolean pantaloniDres;
+                    int pantaloniIndex;
+                    String pantaloniCuloare;
+                    int pantaloniLayer;
+                    int pantaloniX, pantaloniY;
+                    
+                    //de copiat
+                    pantaloniDres=pnin.nextBoolean(); pantaloniIndex=pnin.nextInt();
+                    pantaloniCuloare=pnin.next(); pantaloniLayer=pnin.nextInt();
+                    pantaloniX=pnin.nextInt(); pantaloniY=pnin.nextInt();
+                    Pantaloni pantaloni2= new Pantaloni(pantaloniDres, pantaloniIndex, pantaloniCuloare, pantaloniLayer, pantaloniX, pantaloniY);
+                    
+                    pantaloniDres=pnin.nextBoolean(); pantaloniIndex=pnin.nextInt();
+                    pantaloniCuloare=pnin.next(); pantaloniLayer=pnin.nextInt();
+                    pantaloniX=pnin.nextInt(); pantaloniY=pnin.nextInt();
+                    Pantaloni pantaloni3= new Pantaloni(pantaloniDres, pantaloniIndex, pantaloniCuloare, pantaloniLayer, pantaloniX, pantaloniY);
+                    
+                    pantaloniDres=pnin.nextBoolean(); pantaloniIndex=pnin.nextInt();
+                    pantaloniCuloare=pnin.next(); pantaloniLayer=pnin.nextInt();
+                    pantaloniX=pnin.nextInt(); pantaloniY=pnin.nextInt();
+                    Pantaloni pantaloni4= new Pantaloni(pantaloniDres, pantaloniIndex, pantaloniCuloare, pantaloniLayer, pantaloniX, pantaloniY);
+                    
+                    pantaloniDres=pnin.nextBoolean(); pantaloniIndex=pnin.nextInt();
+                    pantaloniCuloare=pnin.next(); pantaloniLayer=pnin.nextInt();
+                    pantaloniX=pnin.nextInt(); pantaloniY=pnin.nextInt();
+                    Pantaloni pantaloni5= new Pantaloni(pantaloniDres, pantaloniIndex, pantaloniCuloare, pantaloniLayer, pantaloniX, pantaloniY);
+                   
+                    pantaloniDres=pnin.nextBoolean(); pantaloniIndex=pnin.nextInt();
+                    pantaloniCuloare=pnin.next(); pantaloniLayer=pnin.nextInt();
+                    pantaloniX=pnin.nextInt(); pantaloniY=pnin.nextInt();
+                    Pantaloni pantaloni6= new Pantaloni(pantaloniDres, pantaloniIndex, pantaloniCuloare, pantaloniLayer, pantaloniX, pantaloniY);
+                   
+                    pantaloniDres=pnin.nextBoolean(); pantaloniIndex=pnin.nextInt();
+                    pantaloniCuloare=pnin.next(); pantaloniLayer=pnin.nextInt();
+                    pantaloniX=pnin.nextInt(); pantaloniY=pnin.nextInt();
+                    Pantaloni pantaloni7= new Pantaloni(pantaloniDres, pantaloniIndex, pantaloniCuloare, pantaloniLayer, pantaloniX, pantaloniY);
+                   
+                    pantaloniDres=pnin.nextBoolean(); pantaloniIndex=pnin.nextInt();
+                    pantaloniCuloare=pnin.next(); pantaloniLayer=pnin.nextInt();
+                    pantaloniX=pnin.nextInt(); pantaloniY=pnin.nextInt();
+                    Pantaloni pantaloni8= new Pantaloni(pantaloniDres, pantaloniIndex, pantaloniCuloare, pantaloniLayer, pantaloniX, pantaloniY);
+                   
+                    pantaloniDres=pnin.nextBoolean(); pantaloniIndex=pnin.nextInt();
+                    pantaloniCuloare=pnin.next(); pantaloniLayer=pnin.nextInt();
+                    pantaloniX=pnin.nextInt(); pantaloniY=pnin.nextInt();
+                    Pantaloni pantaloni9= new Pantaloni(pantaloniDres, pantaloniIndex, pantaloniCuloare, pantaloniLayer, pantaloniX, pantaloniY);
+                    
                     Pantaloni pantaloni10= new Pantaloni(pantaloni9);
 
                      pantaloniListT.add(pantaloni1);
@@ -622,6 +720,9 @@ public class AvatarTest {
                     {
                         System.out.println(pantaloni + "\n");
                     }
+                    pnin.close();
+                    pnout.close();
+                    
                     //pt filtru pantofi
                     int t1; int layerPantofi;
                     System.out.println("Introduceti 1 pt colectia de iarna sau 2 pt cea de vara.");
@@ -639,7 +740,7 @@ public class AvatarTest {
                     }
                     //pt filtru pantaloni
                     int t2; int layerPantaloni;
-                    System.out.println("Introduceti 1 pt colectia de iarna sau 2 pt cea de vara.");
+                    System.out.println("Introduceti 1 pt pantaloni sau 2 pt dressuri.");
                     t2=scanner.nextInt();
                     System.out.println("Pe ce layer sa fie obiectul? (1-6)");
                     layerPantaloni=scanner.nextInt();
