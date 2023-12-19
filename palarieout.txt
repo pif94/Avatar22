@@ -1,0 +1,20 @@
+Palarie: layer = 0, pozitieX = 0, pozitieY = 0, culoare palarie  =  , index = 0, numePng = 
+
+Palarie: layer = 1, pozitieX = 400, pozitieY = 1000, culoare palarie  = alb, index = 1, numePng = Palarie_1_alb.png
+
+Palarie: layer = 2, pozitieX = 387, pozitieY = 950, culoare palarie  = albastru, index = 2, numePng = Palarie_2_albastru.png
+
+Palarie: layer = 3, pozitieX = 360, pozitieY = 980, culoare palarie  = galben, index = 3, numePng = Palarie_3_galben.png
+
+Palarie: layer = 4, pozitieX = 350, pozitieY = 1000, culoare palarie  = maro, index = 4, numePng = Palarie_4_maro.png
+
+Palarie: layer = 5, pozitieX = 370, pozitieY = 990, culoare palarie  = mov, index = 5, numePng = Palarie_5_mov.png
+
+Palarie: layer = 6, pozitieX = 380, pozitieY = 990, culoare palarie  = negru, index = 6, numePng = Palarie_6_negru.png
+
+Palarie: layer = 7, pozitieX = 380, pozitieY = 980, culoare palarie  = portocaliu, index = 7, numePng = Palarie_7_portocaliu.png
+
+Palarie: layer = 8, pozitieX = 410, pozitieY = 1010, culoare palarie  = rosu, index = 8, numePng = Palarie_8_rosu.png
+
+Palarie: layer = 8, pozitieX = 410, pozitieY = 1010, culoare palarie  = rosu, index = 8, numePng = Palarie_8_rosu.png
+
