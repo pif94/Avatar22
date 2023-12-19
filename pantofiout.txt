@@ -1,0 +1,30 @@
+Obiectul se afla pe Layer 0 aflat la pozitiile [0,0]
+Pantofii sunt din colectia Primavara.Vara cu coloarea =  cu indexul = 0, iar numele fisierlui e 
+
+Obiectul se afla pe Layer 1 aflat la pozitiile [350,1000]
+Pantofii sunt din colectia Primavara.Vara cu coloarea = alb cu indexul = 1, iar numele fisierlui e Pantofi_1_alb.png
+
+Obiectul se afla pe Layer 2 aflat la pozitiile [380,950]
+Pantofii sunt din colectia Primavara.Vara cu coloarea = albastru cu indexul = 2, iar numele fisierlui e Pantofi_2_albastru.png
+
+Obiectul se afla pe Layer 3 aflat la pozitiile [360,985]
+Pantofii sunt din colectia Toamna/Iarna cu coloarea = galben cu indexul = 3, iar numele fisierlui e Pantofi_3_galben.png
+
+Obiectul se afla pe Layer 4 aflat la pozitiile [370,1000]
+Pantofii sunt din colectia Primavara.Vara cu coloarea = maro cu indexul = 4, iar numele fisierlui e Pantofi_4_maro.png
+
+Obiectul se afla pe Layer 5 aflat la pozitiile [370,990]
+Pantofii sunt din colectia Toamna/Iarna cu coloarea = mov cu indexul = 5, iar numele fisierlui e Pantofi_5_mov.png
+
+Obiectul se afla pe Layer 6 aflat la pozitiile [380,990]
+Pantofii sunt din colectia Primavara.Vara cu coloarea = negru cu indexul = 6, iar numele fisierlui e Pantofi_6_negru.png
+
+Obiectul se afla pe Layer 7 aflat la pozitiile [380,980]
+Pantofii sunt din colectia Toamna/Iarna cu coloarea = portocaliu cu indexul = 7, iar numele fisierlui e Pantofi_7_portocaliu.png
+
+Obiectul se afla pe Layer 8 aflat la pozitiile [400,910]
+Pantofii sunt din colectia Primavara.Vara cu coloarea = rosu cu indexul = 8, iar numele fisierlui e Pantofi_8_rosu.png
+
+Obiectul se afla pe Layer 8 aflat la pozitiile [400,910]
+Pantofii sunt din colectia Primavara.Vara cu coloarea = rosu cu indexul = 8, iar numele fisierlui e Pantofi_8_rosu.png
+

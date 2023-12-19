@@ -6,7 +6,7 @@ public class Fata extends Avatar {
     private boolean blinking;
     private String eyeColor;
     private int index;
-    private String namePng;
+    private String numePng;
     private boolean wink;
 
     public Fata()
@@ -14,7 +14,7 @@ public class Fata extends Avatar {
         this.blinking = false;
         this.eyeColor = "";
         this.index = 0;
-        this.namePng=""; 
+        this.numePng=""; 
         this.wink = false;
     }
 
@@ -35,7 +35,7 @@ public class Fata extends Avatar {
         this.blinking = false;
         this.eyeColor = eyeColor;
         this.index = index;
-        this.namePng = "Fata_"+this.index+"_"+this.eyeColor+".png";
+        this.numePng = "fata_"+this.index+"_"+this.eyeColor+".png";
         this.wink = false;
     }
 
@@ -45,7 +45,7 @@ public class Fata extends Avatar {
         this.blinking = F.blinking;
         this.eyeColor = F.eyeColor;
         this.index = F.index;
-        this.namePng = F.namePng;
+        this.numePng = F.numePng;
         this.wink = F.wink;
     }
     
@@ -80,6 +80,18 @@ public class Fata extends Avatar {
     {
         this.index = index;
     }
+
+    public String getNumePng()
+    {
+        return numePng;
+    }
+
+    public void setNumePng(String numePng)
+    {
+        this.numePng = numePng;
+    }
+    
+    
     
     //mod subtil de a indica faptul că avatarul este interactiv
     public void blink()
@@ -119,7 +131,7 @@ public class Fata extends Avatar {
 @Override
 public String toString() {
     return super.toString() + "\nFata cu ochii de culoare = " + this.eyeColor
-            + " ,cu indexul = " + this.index + " cu nume fisier png = " + this.namePng
+            + " ,cu indexul = " + this.index + " cu nume fisier png = " + this.numePng
             + " ochii inchisi = " + this.wink;
 }
 

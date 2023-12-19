@@ -3,7 +3,6 @@ package student.ugal.ro.avatar22;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Vector;
 
 
 public class AvatarTest {
@@ -39,27 +38,7 @@ public class AvatarTest {
          
          Scanner pain = new Scanner(palarieFile);
          PrintWriter paout = new PrintWriter(palarieout);
-         
-         
-        Par p1 = new Par(1, "alb",1,350,1000); 
-        Par p2 = new Par(2,"albastru", 2,340,1050); 
-        //Par p3 = new Par(p2); 
-        Par p3 = new Par(3, "mov", 3,366,950);
-        Palarie pa1 = new Palarie(1, "mov", 1, 300,1000); 
-        Palarie pa2 = new Palarie(2, "negru ", 2,250,900); 
-      //  Palarie pa3 = new Palarie(pa2); 
-        Palarie pa3 = new Palarie(3,"maro", 3,266,850);
-
-        System.out.println(p1);
-        System.out.println(p2);
-        System.out.println(p3);
-        System.out.println(pa1);
-        System.out.println(pa2);
-        System.out.println(pa3);
-        
-        
-        
-        ArrayList<Par> parListT = new ArrayList<>();
+         ArrayList<Par> parListT = new ArrayList<>();
         
         Par par1=new Par();
                     
@@ -774,7 +753,7 @@ File pantofifile = new File("pantofiin.txt");
                               pantofiListT.add(pantofi10);
                     for (Pantofi pantofi : pantofiListT)
                     {
-                        System.out.println(pantofi + "\n");
+                        pfout.println(pantofi + "\n");
                     }
                     
                     pfin.close();
@@ -851,7 +830,7 @@ File pantofifile = new File("pantofiin.txt");
                               pantaloniListT.add(pantaloni10);
                     for (Pantaloni pantaloni : pantaloniListT)
                     {
-                        System.out.println(pantaloni + "\n");
+                        pnout.println(pantaloni + "\n");
                     }
                     pnin.close();
                     pnout.close();

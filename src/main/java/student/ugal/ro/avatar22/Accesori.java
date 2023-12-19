@@ -40,7 +40,7 @@ public class Accesori extends Avatar {
         this.color = color;
         this.mirrored = mirrored;
         this.index = index;
-        this.numePng = "Acesorii_"+this.index+"_"+this.color+".png";
+        this.numePng = "accesorii_"+this.index+"_"+this.color+".png";
     }
 
     public Accesori(Accesori Ac)
@@ -109,6 +109,8 @@ public class Accesori extends Avatar {
     {
         this.mirrored=!this.mirrored;
     }
+    
+    
 
 @Override
 public String toString() {
