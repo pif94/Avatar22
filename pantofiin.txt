@@ -1,0 +1,8 @@
+false 1 alb 1 350 1000
+false 2 albastru 2 380 950
+true 3 galben 3 360 985
+false 4 maro 4 370 1000
+true 5 mov 5 370 990
+false 6 negru 6 380 990
+true 7 portocaliu 7 380 980
+false 8 rosu 8 400 910
