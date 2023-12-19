@@ -1,0 +1,20 @@
+Par: layer = 0,  pozitieX = 0, pozitieY = 0, culoarePar  =  , index = 0, numePng = 
+
+Par: layer = 1,  pozitieX = 350, pozitieY = 1000, culoarePar  = alb, index = 1, numePng = Par_1_alb.png
+
+Par: layer = 2,  pozitieX = 333, pozitieY = 1050, culoarePar  = albastru, index = 2, numePng = Par_2_albastru.png
+
+Par: layer = 3,  pozitieX = 365, pozitieY = 1100, culoarePar  = galben, index = 3, numePng = Par_3_galben.png
+
+Par: layer = 4,  pozitieX = 321, pozitieY = 980, culoarePar  = maro, index = 4, numePng = Par_4_maro.png
+
+Par: layer = 5,  pozitieX = 335, pozitieY = 480, culoarePar  = mov, index = 5, numePng = Par_5_mov.png
+
+Par: layer = 6,  pozitieX = 400, pozitieY = 1000, culoarePar  = negru, index = 6, numePng = Par_6_negru.png
+
+Par: layer = 7,  pozitieX = 370, pozitieY = 130, culoarePar  = portocaliu, index = 7, numePng = Par_7_portocaliu.png
+
+Par: layer = 8,  pozitieX = 300, pozitieY = 1051, culoarePar  = rosu, index = 8, numePng = Par_8_rosu.png
+
+Par: layer = 8,  pozitieX = 300, pozitieY = 1051, culoarePar  = rosu, index = 8, numePng = Par_8_rosu.png
+

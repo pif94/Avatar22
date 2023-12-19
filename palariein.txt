@@ -1,0 +1,8 @@
+1 alb 1 400 1000
+2 albastru 2 387 950
+3 galben 3 360 980 
+4 maro 4 350 1000
+5 mov 5 370 990 
+6 negru 6 380 990 
+7 portocaliu 7 380 980 
+8 rosu 8 410 1010

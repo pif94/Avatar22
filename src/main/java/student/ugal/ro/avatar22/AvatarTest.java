@@ -26,6 +26,238 @@ public class AvatarTest {
             {
 //start case 1
                 case 1:
+                    File parFile = new File("parin.txt");
+         File parout = new File("parout.txt");
+         
+    
+         Scanner pin = new Scanner(parFile);
+         PrintWriter pout = new PrintWriter(parout);
+         
+         File palarieFile = new File("palariein.txt");
+         File palarieout = new File("palarieout.txt");
+         
+         
+         Scanner pain = new Scanner(palarieFile);
+         PrintWriter paout = new PrintWriter(palarieout);
+         
+         
+        Par p1 = new Par(1, "alb",1,350,1000); 
+        Par p2 = new Par(2,"albastru", 2,340,1050); 
+        //Par p3 = new Par(p2); 
+        Par p3 = new Par(3, "mov", 3,366,950);
+        Palarie pa1 = new Palarie(1, "mov", 1, 300,1000); 
+        Palarie pa2 = new Palarie(2, "negru ", 2,250,900); 
+      //  Palarie pa3 = new Palarie(pa2); 
+        Palarie pa3 = new Palarie(3,"maro", 3,266,850);
+
+        System.out.println(p1);
+        System.out.println(p2);
+        System.out.println(p3);
+        System.out.println(pa1);
+        System.out.println(pa2);
+        System.out.println(pa3);
+        
+        
+        
+        ArrayList<Par> parListT = new ArrayList<>();
+        
+        Par par1=new Par();
+                    
+                    int parIndex ;
+                    String parCuloare ;
+                    int parLayer ;
+                    int parX ;
+                    int parY ;
+                     parIndex=pin.nextInt();
+                    parCuloare=pin.next();
+                    parLayer=pin.nextInt();
+                    parX=pin.nextInt();
+                    parY=pin.nextInt();
+                    
+                    Par par2= new Par(parIndex, parCuloare, parLayer,parX,parY);
+                       parIndex=pin.nextInt();
+                    parCuloare=pin.next();
+                    parLayer=pin.nextInt();
+                    parX=pin.nextInt();
+                    parY=pin.nextInt();
+                    Par par3= new Par(parIndex, parCuloare, parLayer,parX,parY);
+                       parIndex=pin.nextInt();
+                    parCuloare=pin.next();
+                    parLayer=pin.nextInt();
+                    parX=pin.nextInt();
+                    parY=pin.nextInt();
+                    Par par4= new Par(parIndex, parCuloare, parLayer,parX,parY);
+                       parIndex=pin.nextInt();
+                    parCuloare=pin.next();
+                    parLayer=pin.nextInt();
+                    parX=pin.nextInt();
+                    parY=pin.nextInt();
+                    Par par5= new Par(parIndex, parCuloare, parLayer,parX,parY);
+                       parIndex=pin.nextInt();
+                    parCuloare=pin.next();
+                    parLayer=pin.nextInt();
+                    parX=pin.nextInt();
+                    parY=pin.nextInt();
+                    Par par6= new Par(parIndex, parCuloare, parLayer,parX,parY);
+                       parIndex=pin.nextInt();
+                    parCuloare=pin.next();
+                    parLayer=pin.nextInt();
+                    parX=pin.nextInt();
+                    parY=pin.nextInt();
+                    Par par7= new Par(parIndex, parCuloare, parLayer,parX,parY);
+                       parIndex=pin.nextInt();
+                    parCuloare=pin.next();
+                    parLayer=pin.nextInt();
+                    parX=pin.nextInt();
+                    parY=pin.nextInt();
+                    Par par8= new Par(parIndex, parCuloare, parLayer,parX,parY);
+                       parIndex=pin.nextInt();
+                    parCuloare=pin.next();
+                    parLayer=pin.nextInt();
+                    parX=pin.nextInt();
+                    parY=pin.nextInt();
+                    Par par9= new Par(parIndex, parCuloare, parLayer,parX,parY);
+                       
+                  /*  Par par3= new Par(2, "albastru", 2,333,1050);
+                    Par par4= new Par(3,"galben", 3,365,1100); 
+                    Par par5= new Par(4,"maro", 4,321,980);
+                    Par par6= new Par(5, "mov", 5,335,480); 
+                    Par par7= new Par(6,"negru", 6,400,1000); 
+                    Par par8= new Par(7,"portocaliu", 7,370,130);
+                    Par par9= new Par(8,"rosu", 8,300,1051);
+                    */
+                    Par par10= new Par(par9);
+
+                     parListT.add(par1);
+                      parListT.add(par2);
+                       parListT.add(par3);
+                        parListT.add(par4);
+                         parListT.add(par5);
+                          parListT.add(par6);
+                           parListT.add(par7);
+                            parListT.add(par8);
+                             parListT.add(par9);
+                              parListT.add(par10);
+                    for (Par par : parListT)
+                    {
+                        pout.println(par + "\n");
+                    }
+                    
+   
+        ArrayList<Palarie> palarieListT = new ArrayList<>();
+        int palarieIndex ;
+                    String palarieCuloare ;
+                    int palarieLayer;
+                    int palarieX;
+                    int palarieY;
+                       palarieIndex=pain.nextInt();
+                    palarieCuloare=pain.next();
+                    palarieLayer=pain.nextInt();
+                    palarieX=pain.nextInt();
+                    palarieY=pain.nextInt();
+                    Palarie palarie1=new Palarie();
+                    Palarie palarie2= new Palarie(palarieIndex, palarieCuloare, palarieLayer,palarieX,palarieY);
+                     palarieIndex=pain.nextInt();
+                    palarieCuloare=pain.next();
+                    palarieLayer=pain.nextInt();
+                    palarieX=pain.nextInt();
+                    palarieY=pain.nextInt();
+                    Palarie palarie3= new Palarie(palarieIndex, palarieCuloare, palarieLayer,palarieX,palarieY);
+                     palarieIndex=pain.nextInt();
+                    palarieCuloare=pain.next();
+                    palarieLayer=pain.nextInt();
+                    palarieX=pain.nextInt();
+                    palarieY=pain.nextInt();
+                    Palarie palarie4= new Palarie(palarieIndex, palarieCuloare, palarieLayer,palarieX,palarieY);
+                     palarieIndex=pain.nextInt();
+                    palarieCuloare=pain.next();
+                    palarieLayer=pain.nextInt();
+                    palarieX=pain.nextInt();
+                    palarieY=pain.nextInt();
+                    Palarie palarie5= new Palarie(palarieIndex, palarieCuloare, palarieLayer,palarieX,palarieY);
+                     palarieIndex=pain.nextInt();
+                    palarieCuloare=pain.next();
+                    palarieLayer=pain.nextInt();
+                    palarieX=pain.nextInt();
+                    palarieY=pain.nextInt();
+                    Palarie palarie6= new Palarie(palarieIndex, palarieCuloare, palarieLayer,palarieX,palarieY);
+                     palarieIndex=pain.nextInt();
+                    palarieCuloare=pain.next();
+                    palarieLayer=pain.nextInt();
+                    palarieX=pain.nextInt();
+                    palarieY=pain.nextInt();
+                    Palarie palarie7= new Palarie(palarieIndex, palarieCuloare, palarieLayer,palarieX,palarieY);
+                     palarieIndex=pain.nextInt();
+                    palarieCuloare=pain.next();
+                    palarieLayer=pain.nextInt();
+                    palarieX=pain.nextInt();
+                    palarieY=pain.nextInt();
+                    Palarie palarie8= new Palarie(palarieIndex, palarieCuloare, palarieLayer,palarieX,palarieY);
+                     palarieIndex=pain.nextInt();
+                    palarieCuloare=pain.next();
+                    palarieLayer=pain.nextInt();
+                    palarieX=pain.nextInt();
+                    palarieY=pain.nextInt();
+                    Palarie palarie9= new Palarie(palarieIndex, palarieCuloare, palarieLayer,palarieX,palarieY);
+                     
+                    /*
+                    Palarie palarie2= new Palarie(1,  "alb", 1, 400, 1000);
+                    Palarie palarie3= new Palarie(2,  "albastru", 2, 387, 950); 
+                    Palarie palarie4= new Palarie(3, "galben", 3, 360, 980); 
+                    Palarie palarie5= new Palarie(4,  "maro", 4, 350, 1000); 
+                    Palarie palarie6= new Palarie(5,  "mov", 5, 370, 990); 
+                    Palarie palarie7= new Palarie(6,  "negru", 6, 380, 990); 
+                    Palarie palarie8= new Palarie(7,  "portocaliu", 7, 380, 980 );
+                    Palarie palarie9= new Palarie(8, "rosu", 8, 410, 1010); 
+                    */
+                    Palarie palarie10= new Palarie(palarie9);
+                    
+                     palarieListT.add(palarie1);
+                      palarieListT.add(palarie2);
+                       palarieListT.add(palarie3);
+                        palarieListT.add(palarie4);
+                         palarieListT.add(palarie5);
+                          palarieListT.add(palarie6);
+                           palarieListT.add(palarie7);
+                            palarieListT.add(palarie8);
+                             palarieListT.add(palarie9);
+                              palarieListT.add(palarie10);
+                    for (Palarie palarie : palarieListT)
+                    {
+                      paout.println(palarie + "\n");
+                    }
+                    
+      // Adaugare filtru Daria
+                    String colorPar;
+                    int layerPar;
+                System.out.println("Ce culoare sa fie obiectele de tip Par?"); 
+                    colorPar = scanner.next(); 
+                System.out.println("Pe ce layer sa fie obiectele de tip Par? (1-8)");
+                    layerPar = scanner.nextInt();                   
+                    for (Par par : parListT) {
+                        if (par.getCuloarePar().equals(colorPar) && par.getLayer() == layerPar) {
+                            System.out.println(par + "\n");
+                        }
+                    }
+
+
+
+                String colorPalarie;
+                int layerPalarie;
+            System.out.println("Ce culoare sa fie obiectele de tip Palarie?"); 
+                colorPalarie = scanner.next(); 
+            System.out.println("Pe ce layer sa fie obiectele de tip Palarie? (1-8)");
+                layerPalarie = scanner.nextInt();
+            for (Palarie palarie : palarieListT) {
+                  if (palarie.getCuloarePalarie().equals(colorPalarie) && palarie.getLayer() == layerPalarie) {
+                  System.out.println(palarie + "\n");
+                    }
+            }
+        pin.close();
+        pout.close();
+        pain.close();
+        paout.close();
+
 
             
 
@@ -338,7 +570,7 @@ public class AvatarTest {
                              
                     break;
                 case 4:
-                    File pantofifile = new File("pantofiin.txt");
+File pantofifile = new File("pantofiin.txt");
                     File pantofiout = new File("pantofiout.txt");
          
                     //de creat scanere si printere individuale pt fiecare clasa
